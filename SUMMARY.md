@@ -6,21 +6,25 @@
 
 * Ranges
   * [Readings](part1/range_readings.md)
+  * [Quiz](part1/range_quiz.md)
   * [Exercises](part1/range_exercises.md)
   * [Solutions](part1/range_solutions.md)
 * Hashes
   * [Readings](part2/hash_readings.md)
+  * [Quiz](part2/hash_quiz.md)
   * [Exercises](part2/hash_exercises.md)
   * [Solutions](part2/hash_solutions.md)
 * Enumerables
   * [Readings](part3/enumerable_readings.md)
+  * [Quiz](part3/enumerable_quiz.md)
   * [Exercises](part3/enumerable_exercises.md)
   * [Solutions](part3/enumerable_solutions.md)
 * Iterators
   * [Readings](part4/iterator_readings.md)
+  * [Quiz](part4/iterator_quiz.md)
   * [Exercises](part4/iterator_exercises.md)
   * [Solutions](part4/iterator_solutions.md)
-<!-- 
+<!--
 ### Problem Sets
 
 
