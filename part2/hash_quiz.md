@@ -1,25 +1,82 @@
 # Hash Quiz
 
+---
+
 ```ruby
-(1..100) # ... A
-(1...100) # .. B
-(1..101) # ... C
-(1...101) # .. D
+animals = {
+  "first" => "kangaroo",
+  "second" => "koala",
+  "third" => "pterodactyl",
+  0 => "a number, not an animal"
+}
 ```
 
 <quiz>
-  <question multiple>
-      <p>Which of the above expressions will create a range from 1 - 100?</p>
-      <answer correct>A</answer>
-      <answer>B</answer>
-      <answer>C</answer>
-      <answer correct>D</answer>
+  <question>
+      <p>Consider the above hash, animals. Invoking animals[0] returns what?</p>
+      <answer>kangaroo</answer>
+      <answer>koala</answer>
+      <answer>pterodactyl</answer>
+      <answer correct>a number, not an animal</answer>
+      <answer>nil</answer>
   </question>
-  <question multiple>
-    <p>Which of the following methods exist for ranges?</p>
-    <answer correct>#each</answer>
-    <answer>#slice</answer>
-    <answer>#[]</answer>
-    <answer correct>#last</answer>
+  <question>
+    <p>Consider the above hash, animals. Invoking animals[-1] returns what?</p>
+    <answer>kangaroo</answer>
+    <answer>koala</answer>
+    <answer>pterodactyl</answer>
+    <answer>a number, not an animal</answer>
+    <answer correct>nil</answer>
+  </question>
+  <question>
+    <p>Invoking the #values method on a hash returns what type of object?</p>
+    <answer>Hash</answer>
+    <answer correct>Array</answer>
+    <answer>String</answer>
+    <answer>Integer</answer>
+  </question>
+</quiz>
+
+```ruby
+animals = {
+  first: "kangaroo",
+  second: "koala",
+  third: "pterodactyl"
+}
+```
+
+<quiz>
+  <question>
+    <p>Consider the above hash, animals. Invoking animals["first"] returns what?</p>
+    <answer>kangaroo</answer>
+    <answer>koala</answer>
+    <answer>pterodactyl</answer>
+    <answer correct>nil</answer>
+  </question>
+</quiz>
+
+```ruby
+hash = {one: :two}
+hash[:two] = :three
+hash[:one] = :four
+
+puts hash[:one] # ????
+puts hash[:two] # ????
+```
+
+<quiz>
+  <question>
+    <p>Consider the above hash. What is hash[:one] ?</p>
+    <answer>:one</answer>
+    <answer>:two</answer>
+    <answer>:three</answer>
+    <answer correct>:four</answer>
+  </question>
+  <question>
+    <p>Consider the above hash. What is hash[:two] ?</p>
+    <answer>:one</answer>
+    <answer>:two</answer>
+    <answer correct>:three</answer>
+    <answer>:four</answer>
   </question>
 </quiz>

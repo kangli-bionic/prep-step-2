@@ -155,7 +155,7 @@ dictionary = {
 dictionary[:dog] # ==> "a best friend"
 ```
 
-**If and only if the keys of a hash are symbols**, we can re-write the above dictionary like so:
+**If and only if the keys of a hash are symbols**, we can use the following syntax:
 
 ```ruby
 dictionary = {
@@ -168,8 +168,8 @@ dictionary = {
 dictionary[:dog] # ==> "a best friend"
 ```
 
-Note we do two things:
+Note that we do two things:
   * Move the colon to the right side of the symbol
   * Omit the hash rocket
 
-This is an **extremel common** pattern when working with hashes.
+This is an **extremely common** pattern when working with hashes.
