@@ -24,6 +24,16 @@
   * [Quiz](part4/iterator_quiz.md)
   * [Exercises](part4/iterator_exercises.md)
   * [Solutions](part4/iterator_solutions.md)
+* Style and Debugging
+  * Code Style
+    * [Readings](part5/code_style_readings.md)
+    * [Exercises](part5/code_style_exercises.md)
+  * Debugging
+    * [Readings](part5/debugging_readings.md)
+    * [Exercises](part5/debugging_exercises.md)
+    * [Solutions](part5/debugging_solutions.md)
+
+
 <!--
 ### Problem Sets
 
