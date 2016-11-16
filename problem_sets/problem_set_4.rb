@@ -1,133 +1,179 @@
 
-# Write a method that takes an array of words and returns only the words that are
-# anagrams of a given string.
 
-def anagrams(string, array)
+
+
+def can_tweak_sign?(normal_sign, vandalized_sign)
+  #
+  # your code goes here
+  #
 end
 
-#Tests
-puts "\nAnagrams:\n" + "*" * 15 + "\n"
-puts anagrams("cat", ["cat"]) == ["cat"]
-words = ["cat", "act", "bat", "tac"]
-puts anagrams("tca", words) == ["cat", "act", "tac"]
-words = ["aaa", "aa", "a"]
-puts anagrams("aa", words) == ["aa"]
+puts "-------Sign Tweakers-------"
+puts can_tweak_sign?("Come in and see our pretty armchairs", "Come and see our hairy armpits") == true
+puts can_tweak_sign?("Student and teacher art fair starts Wed.", "Teacher farts stain underwear") == true
+puts can_tweak_sign?("Choose the bread of life or you are toast", "Teacher farts stain underwear") == false
 
-# ************************************
-# Write a boolean function that returns true if the vowels in a given word appear in order
 
-def ordered_vowel_word?(word)
+
+# Repeated Number Ranges
+# ------------------------------------------------------------------------------
+# Given a list of numbers, give the start and end indices each time a number shows
+# up multiple times in a row.
+#
+
+def repeated_number_ranges(numbers)
+  #
+  # your code goes here
+  #
 end
 
-#Tests
-puts "\nOrdered Vowel Word:\n" + "*" * 15 + "\n"
-puts ordered_vowel_word?("car") == true
-puts ordered_vowel_word?("academy") == true
-puts ordered_vowel_word?("programmer") == false
-puts ordered_vowel_word?("grapefruit") == false
+puts "-------Repeated Number Ranges-------"
+puts repeated_number_ranges([1, 1, 2]) == [[0, 1]]
+puts repeated_number_ranges([1, 2, 3, 3, 4]) == [[2, 3]]
+puts repeated_number_ranges([1, 2, 3, 3, 4, 4]) == [[2, 3], [4, 5]]
+puts repeated_number_ranges([1, 1, 1, 2, 3, 3, 4]) == [[0, 2], [4, 5]]
+puts repeated_number_ranges([8, 7, 7, 14, 12, 12, 12, 12, 21]) == [[1, 2], [4, 7]]
 
-# ************************************
-# Write a function that takes an array of words and returns the words whose vowels appear in order
 
-def ordered_vowels(words)
+
+
+
+
+# Time Sums
+# ------------------------------------------------------------------------------
+# Return an array of all the minutes of the day whose digits sum to N.
+#
+# Use military time, so 1:00 PM is really 13:00 PM.
+# ------------------------------------------------------------------------------
+
+def time_sums(n)
+  #
+  # your code goes here
+  #
 end
 
-puts "\nOrdered Vowels:\n" + "*" * 15 + "\n"
-puts ordered_vowels(["are"]) == ["are"]
-puts ordered_vowels(["era", "are", "ear"]) == ["are"]
-puts ordered_vowels(["hey", "wassup", "hello"]) == ["hey", "wassup", "hello"]
-puts ordered_vowels(["firefox", "chrome", "safari", "netscape", "aeiou"]) == ["safari", "aeiou"]
 
-# ************************************
-# Write a function that takes two years and returns all the years within that range with no repeated digits.
-# Hint: helper method?
-# no_repeat_years(2010,2015) -> [2013,2014,2015]
+puts "\nTens Time\n" + "*" * 15 + "\n"
+puts time_sums(0) == ["00:00"]
+puts time_sums(1) == ["00:01", "00:10", "01:00", "10:00"]
+puts time_sums(23) == ["09:59", "18:59", "19:49", "19:58"]
+puts time_sums(24) == ["19:59"]
 
-def no_repeat_years(first_year, last_year)
+
+
+
+
+
+# Fall and Winter Birthdays
+# ------------------------------------------------------------------------------
+# Given a list of students and what month their birthday is, return all the pairs
+# of students whose birthdays both fall in the second half of the year.  Months
+# are numbers, and assume that July (month 7) and later is the second half of
+# the year.
+#
+# Only count pairs once, and work from the beginning of the list to the end.
+#
+
+def fall_and_winter_birthdays(students_with_birthdays)
+  #
+  # your code goes here
+  #
 end
 
-puts "\nNo Repeat Years:\n" + "*" * 15 + "\n"
-puts no_repeat_years(1990, 2000) == []
-puts no_repeat_years(1900,1902) == [1902]
-puts no_repeat_years(2016, 2020) == [2016, 2017, 2018, 2019]
+students_with_birthdays_1 = [
+  ["Asher", 6],
+  ["Bertie", 11],
+  ["Dottie", 8],
+  ["Warren", 9]
+]
+
+second_half_birthday_pairs_1 = [
+  ["Bertie", "Dottie"],
+  ["Bertie", "Warren"],
+  ["Dottie", "Warren"]
+]
+
+students_with_birthdays_2 = [
+  ["Asher", 6],
+  ["Bertie", 11],
+  ["Dottie", 8],
+  ["Warren", 9],
+  ["Charlie", 7],
+  ["Nassim", 4],
+  ["Ajit", 10],
+]
+
+second_half_birthday_pairs_2 = [
+  ["Bertie", "Dottie"],
+  ["Bertie", "Warren"],
+  ["Bertie", "Charlie"],
+  ["Bertie", "Ajit"],
+  ["Dottie", "Warren"],
+  ["Dottie", "Charlie"],
+  ["Dottie", "Ajit"],
+  ["Warren", "Charlie"],
+  ["Warren", "Ajit"],
+  ["Charlie", "Ajit"],
+]
 
 
-# ************************************
-# Write a method that takes a string of lower case words (no punctuation) and returns the letter that occurs most frequently.
-# Use a hash within your method to keep track of the letter counts.  You will need to account for spaces.  There are a few ways you can do this.
+puts "\nFall and Winter Birthdays\n" + "*" * 15 + "\n"
+puts fall_and_winter_birthdays(students_with_birthdays_1) == second_half_birthday_pairs_1
+puts fall_and_winter_birthdays(students_with_birthdays_2) == second_half_birthday_pairs_2
 
-def most_frequent_letter(string)
+
+
+
+
+
+# Care Bear Summary
+# ------------------------------------------------------------------------------
+# You have a calendar of hugs that care bears made (given as a list of
+# names by care bears).  Some of them have hugged multiple
+# times in a row.
+#
+# Return a hash where the keys are the care bears and the values are an array
+# of all of the start and end days of their hugging streaks.
+#
+# Days are the index of the calendar array.
+
+def care_bear_summary(calendar_of_hugs)
+  #
+  # your code goes here
+  #
 end
 
-puts "\nMost Frequent Letter\n" + "*" * 15 + "\n"
-puts most_frequent_letter("aaaaa") == "a"
-puts most_frequent_letter("aaaaabbbbbb") == "b"
-puts most_frequent_letter("we the people in order to form a more perfect union") == "e"
+puts "\nCare Bear Summary\n" + "*" * 15 + "\n"
 
+hug_calendar_1 = [
+  "Birthday Bear",
+  "Bedtime Bear",
+  "Birthday Bear",
+  "Birthday Bear",
+  "Bedtime Bear"
+]
 
-# ************************************
-# Write a method that takes a string of lower case words (no punctuation) and returns an array of letters that occur more
-# than once.  We'll need to account for spaces, too.  Again, there are a few ways you can do this.
+care_bear_counts_1 = {
+  "Birthday Bear" => [[2, 3]]
+}
 
-def non_unique_letters(string)
-end
+hug_calendar_2 = [
+  "Birthday Bear",
+  "Birthday Bear",
+  "Cheer Bear",
+  "Bedtime Bear",
+  "Bedtime Bear",
+  "Birthday Bear",
+  "Birthday Bear",
+  "Birthday Bear",
+  "Bedtime Bear",
+  "Friend Bear"
+]
 
-puts "\nNon-Unique Letters\n" + "*" * 15 + "\n"
-puts non_unique_letters("abbbcdddde") == ["b", "d"]
-puts non_unique_letters("abcde") == []
-puts non_unique_letters("aabbccddee") == ["a", "b", "c", "d", "e"]
-puts non_unique_letters("aaa bbb c d eee") == ["a", "b", "e"]
+care_bear_counts_2 = {
+  "Birthday Bear" => [[0, 1], [5, 7]],
+  "Bedtime Bear" => [[3, 4]]
+}
 
-# ************************************
-# Write a method that takes a string of lower case words and returns an array of letters that do not occur in the string.
-# This problem requires a different approach from the one we used in most_frequent_letter and we will need to show some care
-# in how we set up the hash or process it to get the result.  Do you see why?
-# We'll need to account for spaces, too.  Again, there are a few ways you can do this.
-
-def missing_letters(string)
-end
-
-puts "\nMissing Letters\n" + "*" * 15 + "\n"
-puts missing_letters("abcdefghijklmnopqrstuvwxyz") == []
-puts missing_letters("abcdefghiklmnopqrstuvwxyz") == ["j"]
-puts missing_letters("abcdefghiklmnopstuvwxyz") == ["j", "q", "r"]
-
-#write a function primes that an argument n and returns the first n primes
-
-def primes(n)
-end
-
-puts "\nPrimes:\n" + "*" * 15 + "\n"
-puts primes(0) == []
-puts primes(1) == [2]
-puts primes(2) == [2,3]
-puts primes(6) == [2,3,5,7,11,13]
-
-#write a boolean function zero_sum? that takes an array of integers and returns
-#true if 2 elements in the array sum to zero.
-
-# NOTE: For this question, do the "write out the variables" exercise from part 4 after
-# you've written a first draft.
-
-def zero_sum?(array)
-end
-
-puts "\nZero Sum:\n" + "*" * 15 + "\n"
-puts zero_sum?([1, -1]) == true
-puts zero_sum?([1,1,0,2,1]) == false
-puts zero_sum?([1,1,0,2,1,0]) == true
-puts zero_sum?([2,3,4,-3,1]) == true
-
-#write a function largest_sum_pair that takes an array of intergers and returns the
-#2 unique indices whose elements sum to the largest number. Formatted [earlier_index, later_index]
-
-# NOTE: For this question, do the "write out the variables" exercise from part 4 after
-# you've written a first draft.
-
-def largest_sum_pair(array)
-end
-
-puts "\nLargest Sum Pair:\n" + "*" * 15 + "\n"
-puts largest_sum_pair([1,2,3,4,5]) == [3,4]
-puts largest_sum_pair([3,2,1,0,1,2,3]) == [0,6]
-puts largest_sum_pair([-2,-1,-1,-2,-3]) == [1,2]
+puts care_bear_summary(hug_calendar_1) == care_bear_counts_1
+puts care_bear_summary(hug_calendar_2) == care_bear_counts_2

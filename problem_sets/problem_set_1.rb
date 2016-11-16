@@ -1,87 +1,136 @@
-# Using comments, write out an approach in pseudocode for each of these first.
 
-# Write a function that given an array, returns another array with each of the numbers multiplied by two. Don't change the original array, make sure you construct a copy!
-def array_times_two(array)
+# Define a method that accepts an array of numbers as an argument and uses #select to
+# return an array of only even numbers.
+
+def get_evens(array)
 end
 
-# Tests — these should all spit out true!
-puts "\nArray times two:\n" + "*" * 15 + "\n"
-puts array_times_two([1, 2, 3]) == [2, 4, 6]
-puts array_times_two([0, -1, -2]) == [0, -2, -4]
-dont_change_this = [3, 4, 5]
-array_times_two(dont_change_this)
-puts dont_change_this == [3, 4, 5]
+puts "\nGet Evens:\n" + "*" * 15 + "\n"
+puts get_evens([1, 2, 3, 4, 5, 6, 7]) == [2, 4, 6]
+puts get_evens([2, 4, 6, 8, 10, 12, 14]) == [2, 4, 6, 8, 10, 12, 14]
+puts get_evens([1, 3, 5, 7, 9, 11]) == []
 
 # *********************************************
 
-# Write a function that given an array, now CHANGES each of the numbers to be twice as big. This should mutate the original array!
-def array_times_two!(array)
+# Define a method that accepts an array of numbers as an argument and uses #reject to return
+# an array of numbers that aren't odd.
+
+def reject_odds(array)
 end
 
-# Tests
-puts "\nArray times two!:\n" + "*" * 15 + "\n"
-puts array_times_two!([1, 2, 3]) == [2, 4, 6]
-change_this = [6, 7, 8]
-array_times_two!(change_this)
-puts change_this == [12, 14, 16]
+puts "\nReject Odds:\n" + "*" * 15 + "\n"
+puts reject_odds([1, 2, 3, 4, 5]) == [2, 4]
+puts reject_odds([2, 4, 6, 8, 10]) == [2, 4, 6, 8, 10]
 
 # *********************************************
 
-# Write a function that given an array, returns another array of only the unique elements. I.e., return a version without duplicates.
-def uniq(array)
+# Define a method that accepts an array of numbers as an argument and uses #reduce to
+# sum the numbers in an array.
+
+def array_sum(array)
 end
 
-# Tests
-puts "\nUniq:\n" + "*" * 15 + "\n"
-puts uniq([5, 5, 5, 5]) == [5]
-puts uniq([1]) == [1]
-puts uniq([1, 2, 1, 3, 3]) == [1, 2, 3]
+puts "\nArray Sum:\n" + "*" * 15 + "\n"
+puts array_sum([]) == 0
+puts array_sum([1, 2, 3]) == 6
+puts array_sum([5, 5, 5, 5, 5]) == 25
 
 # *********************************************
 
-# A Slippery Number is a number is that has 3 as a factor or has 5 as a factor, but does *not* have both as factors. For example, 6 is a Slippery Number, but 30 is not. Write a function that given an N, returns an array of the first N Slippery numbers.
+# Define a method that accepts an array of integers as an argument and returns an array of
+# those values doubled. This method should *not* modify the original array.
 
-# You'll want to write a helper function that helps you determine which numbers are Slippery.
-
-def slippery_numbers(n)
+def calculate_doubles(array)
 end
 
-def is_slippery?(number)
-end
-
-# Tests
-puts "\nSlippery numbers:\n" + "*" * 15 + "\n"
-puts slippery_numbers(1) == [3]
-puts slippery_numbers(2) == [3, 5]
-puts slippery_numbers(7) == [3, 5, 6, 9, 10, 12, 18]
+puts "\nCalculate Doubles:\n" + "*" * 15 + "\n"
+array = [1, 2, 3, 4, 5]
+doubled_array = calculate_doubles(array)
+puts array != doubled_array
+puts doubled_array == [2, 4, 6, 8, 10]
 
 # *********************************************
 
-# Write a function that finds whether any two elements in the array sum to 0. If it does, return true; else, return false.
-def two_sum_to_zero?(array)
+# Define a method that accepts an array of integers as an argument and returns an array of
+# those values doubled. This method *should* modify the original array.
+
+def calculate_doubles!(array)
 end
 
-# Tests
-puts "\nTwo sum to zero?:\n" + "*" * 15 + "\n"
-puts two_sum_to_zero?([4, 2, 6]) == false
-puts two_sum_to_zero?([-2, 5, 12, -3, 2]) == true
-puts two_sum_to_zero?([0, 5]) == false
+puts "\nCalculate Doubles!:\n" + "*" * 15 + "\n"
+array = [1, 2, 3, 4, 5]
+calculate_doubles!(array)
+puts array == [2, 4, 6, 8, 10]
 
 # *********************************************
 
-# A magic number is a number whose digits, when added together, sum to 7. For example, the number 34 would be a magic number, because 3 + 4 = 7. Write a function that finds the first N many magic numbers.
+# Define a method that accepts an array of numbers as an argument and returns the sum of
+# each element multiplied by its index.
+# For example, [2, 9, 7] would return 23, since (2 * 0) + (9 * 1) + (7 * 2) = 0 + 9 + 14 = 23
 
-# You'll want to write a helper function that checks whether a given number is a magic number.
-# Reminder: you can convert an integer to a string using #to_s. You can convert a string back to an integer using #to_i.
-
-def magic_numbers(count)
+def array_sum_with_index(array)
 end
 
-def is_magic_number?(number)
+puts "\nArray Sum With Index:\n" + "*" * 15 + "\n"
+puts array_sum_with_index([0, 1, 2, 3]) == 14
+
+# *********************************************
+
+# Define a method that accepts two arguments, a string and an integer. Return a copy of
+# the string, but with the nth letter removed.
+
+def remove_nth_letter(string, n)
 end
 
-# Tests
-puts "\nMagic numbers:\n" + "*" * 15 + "\n"
-puts magic_numbers(1) == [7]
-puts magic_numbers(3) == [7, 16, 25]
-puts magic_numbers(20) == [7, 16, 25, 34, 43, 52, 61, 70, 106, 115, 124, 133, 142, 151, 160, 205, 214, 223, 232, 241]
+puts "\nRemove nth Letter:\n" + "*" * 15 + "\n"
+puts remove_nth_letter("helloworld", 5) == "helloorld"
+puts remove_nth_letter("helloworld", -3) == "hellowold"
+
+# *********************************************
+
+# Define a method that returns the third greatest element in an array.
+
+def third_greatest(array)
+end
+
+puts "\nThird Greatest:\n" + "*" * 15 + "\n"
+puts third_greatest([5, 9, 3, 7, 7, 2, 10]) == 7
+
+# *********************************************
+
+# Define a method that accepts a string of words separated by spaces and returns the longest word. If there is more
+# than one word of that length, it should return the first instance of that word.
+
+def longest_word(string)
+end
+
+puts "\nLongest Word:\n" + "*" * 15 + "\n"
+puts longest_word("we the people in order to form a more perfect union establish justice ensure domestic tranquility") == "tranquility"
+puts longest_word("one two three four five six seven") == "three"
+
+# *********************************************
+
+# Define a boolean method, #substring?(long_string, short_string), that accepts two strings
+# as arguments. Return true / false if the short_string is a substring of the long_string
+
+def substring?(long_string, short_string)
+end
+
+puts "---------Substring-------"
+puts "\nSubstring?:\n" + "*" * 15 + "\n"
+puts substring?("thisisaverylongstring", "sisa") == true
+puts substring?("thisisaverylongstring", "ting") == false
+puts substring?("whatifikeptontypingforever", "ik") == true
+
+# *********************************************
+
+# Define a method that accepts a string as an argument and returns an array of letters
+# that do not occur in the string.
+
+def missing_letters(string)
+end
+
+puts "\nMissing Letters:\n" + "*" * 15 + "\n"
+puts missing_letters("abcdefghijklmnopqrstuvwxyz") == []
+puts missing_letters("abcdefghiklmnopqrstuvwxyz") == ["j"]
+puts missing_letters("abcdefghiklmnopstuvwxyz") == ["j", "q", "r"]
