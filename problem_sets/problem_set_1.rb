@@ -5,7 +5,7 @@
 def get_evens(array)
 end
 
-puts "\nGet Evens:\n" + "*" * 15 + "\n"
+puts "\nGet evens:\n" + "*" * 15 + "\n"
 puts get_evens([1, 2, 3, 4, 5, 6, 7]) == [2, 4, 6]
 puts get_evens([2, 4, 6, 8, 10, 12, 14]) == [2, 4, 6, 8, 10, 12, 14]
 puts get_evens([1, 3, 5, 7, 9, 11]) == []
@@ -18,7 +18,7 @@ puts get_evens([1, 3, 5, 7, 9, 11]) == []
 def reject_odds(array)
 end
 
-puts "\nReject Odds:\n" + "*" * 15 + "\n"
+puts "\nReject odds:\n" + "*" * 15 + "\n"
 puts reject_odds([1, 2, 3, 4, 5]) == [2, 4]
 puts reject_odds([2, 4, 6, 8, 10]) == [2, 4, 6, 8, 10]
 
@@ -30,7 +30,7 @@ puts reject_odds([2, 4, 6, 8, 10]) == [2, 4, 6, 8, 10]
 def array_sum(array)
 end
 
-puts "\nArray Sum:\n" + "*" * 15 + "\n"
+puts "\nArray sum:\n" + "*" * 15 + "\n"
 puts array_sum([]) == 0
 puts array_sum([1, 2, 3]) == 6
 puts array_sum([5, 5, 5, 5, 5]) == 25
@@ -43,7 +43,7 @@ puts array_sum([5, 5, 5, 5, 5]) == 25
 def calculate_doubles(array)
 end
 
-puts "\nCalculate Doubles:\n" + "*" * 15 + "\n"
+puts "\nCalculate dubles:\n" + "*" * 15 + "\n"
 array = [1, 2, 3, 4, 5]
 doubled_array = calculate_doubles(array)
 puts array != doubled_array
@@ -57,7 +57,7 @@ puts doubled_array == [2, 4, 6, 8, 10]
 def calculate_doubles!(array)
 end
 
-puts "\nCalculate Doubles!:\n" + "*" * 15 + "\n"
+puts "\nCalculate doubles!:\n" + "*" * 15 + "\n"
 array = [1, 2, 3, 4, 5]
 calculate_doubles!(array)
 puts array == [2, 4, 6, 8, 10]
@@ -71,7 +71,7 @@ puts array == [2, 4, 6, 8, 10]
 def array_sum_with_index(array)
 end
 
-puts "\nArray Sum With Index:\n" + "*" * 15 + "\n"
+puts "\nArray sum with index:\n" + "*" * 15 + "\n"
 puts array_sum_with_index([0, 1, 2, 3]) == 14
 
 # *********************************************
@@ -82,7 +82,7 @@ puts array_sum_with_index([0, 1, 2, 3]) == 14
 def remove_nth_letter(string, n)
 end
 
-puts "\nRemove nth Letter:\n" + "*" * 15 + "\n"
+puts "\nRemove nth letter:\n" + "*" * 15 + "\n"
 puts remove_nth_letter("helloworld", 5) == "helloorld"
 puts remove_nth_letter("helloworld", -3) == "hellowold"
 
@@ -93,7 +93,7 @@ puts remove_nth_letter("helloworld", -3) == "hellowold"
 def third_greatest(array)
 end
 
-puts "\nThird Greatest:\n" + "*" * 15 + "\n"
+puts "\nThird greatest:\n" + "*" * 15 + "\n"
 puts third_greatest([5, 9, 3, 7, 7, 2, 10]) == 7
 
 # *********************************************
@@ -104,7 +104,7 @@ puts third_greatest([5, 9, 3, 7, 7, 2, 10]) == 7
 def longest_word(string)
 end
 
-puts "\nLongest Word:\n" + "*" * 15 + "\n"
+puts "\nLongest word:\n" + "*" * 15 + "\n"
 puts longest_word("we the people in order to form a more perfect union establish justice ensure domestic tranquility") == "tranquility"
 puts longest_word("one two three four five six seven") == "three"
 
@@ -130,7 +130,7 @@ puts substring?("whatifikeptontypingforever", "ik") == true
 def missing_letters(string)
 end
 
-puts "\nMissing Letters:\n" + "*" * 15 + "\n"
+puts "\nMissing letters:\n" + "*" * 15 + "\n"
 puts missing_letters("abcdefghijklmnopqrstuvwxyz") == []
 puts missing_letters("abcdefghiklmnopqrstuvwxyz") == ["j"]
 puts missing_letters("abcdefghiklmnopstuvwxyz") == ["j", "q", "r"]
