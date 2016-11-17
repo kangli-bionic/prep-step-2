@@ -2,6 +2,8 @@
 
 ## Introduction
 
+Checkout the [Enumerable Documentation][enum-docs]. **Bookmark this page!** Look at the "Methods" column on the left-hand side.
+
 The `Enumerable` module contains a set of methods that are 'mixed in' to various other classes. You don't have to understand how this works, but you need to know where and how to use `Enumerable` methods.
 
 The `Enumerable` methods are *extremely* useful methods that can be used with ruby collections. All of the following can use `Enumerable` methods:
@@ -17,11 +19,9 @@ For example, let's say you have an array of integers and you want to double each
     [1, 2, 3].map { |el| el * 2 } # ==> [2, 4, 6]
   ```
 
-You should take a minute to review the [documentation][documentation] for the `Enumerable` module. Glance over the list of methods in the grey box on the left-hand side of the page. Try to guess what these methods might do!
-
 ### Code Blocks
 
-Code blocks used with `Array` and `Range` `Enumerable` methods use a single argument, but code blocks used with `Hash` `Enumerable` methods use two arguments: one for keys and one for values.
+Code blocks used with `Array` and `Range` `Enumerable` methods use a single argument, but code blocks used with `Hash` and `Enumerable` methods use two arguments: one for keys and one for values.
 
   ```ruby
     [1, 2, 3].select { |el| ... }          # ==> single argument in code block

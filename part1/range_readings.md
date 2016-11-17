@@ -2,6 +2,10 @@
 
 ## Introduction
 
+Checkout the [Range Documentation][range-docs]. **Bookmark this page!** Look at the "Methods" column on the left-hand side.
+
+[range-docs]: https://ruby-doc.org/core-2.3.1/Range.html
+
 Ranges can be used to represent a set of integers or characters. For example, lets say you wanted to create an alphabet. You'll need a collection of all the characters from "a" - "z". Well, you could use an array..
 
 ```ruby

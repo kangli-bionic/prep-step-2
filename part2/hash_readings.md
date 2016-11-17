@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Complete the [CodeAcademy Hashes][hashes] section if you haven't yet.
+Checkout the [Hash Documentation][hash-docs]. **Bookmark this page!** Look at the "Methods" column on the left-hand side.
+
+[hash-docs]: https://ruby-doc.org/core-2.3.1/Hash.html
 
 Hashes are used for storing key-value pairs. Like arrays, they are an extremely common and useful data structure. **Get familiar with them!**
 
