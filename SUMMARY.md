@@ -34,9 +34,10 @@
     * [Solutions](part5/debugging_solutions.md)
 
 
-<!--
-### Problem Sets
+
+<!-- ### Problem Sets -->
 
 
 
-### Practice Assessments -->
+
+<!-- ### Practice Assessments -->

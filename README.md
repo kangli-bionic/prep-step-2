@@ -1,6 +1,6 @@
 # App Academy Prep - Step 2
 
-Welcome to JumpStart's intermediate Track! We're excited to help you learn about more advanced topics in the ruby programming language.
+Welcome to the second phase of App Academy Prep! During step 2, we'll learn about more advanced topics in the ruby programming language. We'll then use these new tools to write cleaner, shorter methods and tackle harder problems!
 
 ---
 # Pre-Curriculum
