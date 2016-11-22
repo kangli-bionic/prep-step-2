@@ -12,7 +12,7 @@
   * <a href="/problem_sets/problem_set_3.rb" download >Problems</a>
   * <a href="/problem_sets/problem_set_3_solution.rb" download >Solutions</a>
 
-#### Problem Set 3
+#### Problem Set 4
   * <a href="/problem_sets/problem_set_4.rb" download >Problems</a>
   * <a href="/problem_sets/problem_set_4_solution.rb" download >Solutions</a>
 
