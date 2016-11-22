@@ -1,16 +1,12 @@
 
 def get_evens(array)
-  array.select do |element|
-    element % 2 == 0
-  end
+  array.select { |element| element.even? }
 end
 
 # ****************************************************************************
 
 def reject_odds(array)
-  array.reject do |element|
-    element % 2 != 0
-  end
+  array.reject { |element| element.odd? }
 end
 
 # ****************************************************************************
@@ -24,63 +20,56 @@ end
 # ****************************************************************************
 
 def calculate_doubles(array)
-  array.map do |element|
-    element * 2
-  end
+  array.map { |element| element * 2 }
 end
 
 # ****************************************************************************
 
 def calculate_doubles!(array)
-  array.map! do |element|
-    element * 2
-  end
+  array.map! { |element| element * 2 }
 end
 
 # ****************************************************************************
 
 def array_sum_with_index(array)
   sum = 0
+
   array.each_with_index do |number, index|
     sum += ( number * index )
   end
+
   sum
 end
 
 # Remove the nth letter of the string
 def remove_nth_letter(string, n)
-  string[0...n] + string[n + 1..-1]
+  string[0...n] + string[(n + 1)..-1]
 end
 
 # ****************************************************************************
 
 def third_greatest(array)
+  array.sort[-3]
 end
 
 # ****************************************************************************
 
 def longest_word(string)
+  words = string.split
+  words.max_by { |word| word.length }
 end
 
 # ****************************************************************************
 
 def substring?(long_string, short_string)
-
+  long_string.include?(short_string)
 end
 
 # ****************************************************************************
 
 def missing_letters(string)
-  alphabet = {}
-  ("a".."z").each do |letter|
-    alphabet[letter] = 0
+  alphabet = ("a".."z")
+  alphabet.reject do |el|
+    string.include?(el)
   end
-  string.chars do |character|
-    alphabet[character] += 1 unless character == " "
-  end
-  missing_letters = []
-  alphabet.each do |letter, count|
-    missing_letters << letter if count == 0
-  end
-  missing_letters
 end
