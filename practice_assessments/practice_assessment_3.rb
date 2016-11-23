@@ -29,7 +29,7 @@ puts in_all_strings?(["axe", "ajax", "axl rose"], "ax") == true
 
 # ------------------------------------------------------------------------------
 
-# Biodiversity
+# Biodiversity Index
 
 # Given an array of specimens, return the biodiversity index, which is defined
 # by the following formula: number_of_species^2 times the smallest_population_size
@@ -49,24 +49,25 @@ puts biodiversity_index(["cat", "fly", "dog", "dog", "cat", "cat"]) == 3
 
 # ------------------------------------------------------------------------------
 
-# For F's Sake
+# For C's Sake
 
-# Given a string, return the word that has the letter "f" closest to
+# Given a string, return the word that has the letter "c" closest to
 # the end of it.  If there's a tie, return the earlier word.  Ignore punctuation.
 #
-# If there's no f, return an empty string.
+# If there's no "c", return an empty string.
 
-def for_fs_sake(string)
+def for_cs_sake(string)
 end
 
-puts "------For F's Sake------"
-puts for_fs_sake("puff daddy") == "puff"
-puts for_fs_sake("I got a lot of problems with you people! And now you're gonna hear about it!") == "of"
-puts for_fs_sake("fat friars fly fish") == "fat"
-puts for_fs_sake("the French call him David Plouffe") == "Plouffe"
-puts for_fs_sake("pikachu! i choose you!") == ""
+puts "------For C's Sake------"
+puts for_cs_sake("pluck") == "pluck"
+puts for_cs_sake("Pick the peach I would choose!") == "Pick"
+puts for_cs_sake("cheese cluck! muck") == "cluck"
+puts for_cs_sake("none of that letter here") == ""
 
 # ------------------------------------------------------------------------------
+
+# First Last Indicies
 
 # Write a functinon that takes a string and
 # returns a hash in which each key is a character in the string

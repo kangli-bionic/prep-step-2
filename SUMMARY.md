@@ -40,5 +40,5 @@
 
 
 
-
-<!-- ### Practice Assessments -->
+### Practice Assessments
+  * [Practice Assessments](practice_assessments/README.md)

@@ -1,3 +1,4 @@
+# In All Strings
 
 def in_all_strings?(long_strings, short_string)
   long_strings.all? do |long_string|
@@ -6,84 +7,63 @@ def in_all_strings?(long_strings, short_string)
 end
 
 # ------------------------------------------------------------------------------
+# Biodiversity Index
 
 def biodiversity_index(specimens)
-  population_size = Hash.new(0)
-  specimens.each do |specimen|
-    population_size[specimen] += 1
+  uniq_specimens = specimens.uniq
+  species_count = {}
+
+  uniq_specimens.each do |species|
+    species_count[species] = specimens.count(species)
   end
 
-  number_of_species = specimens.uniq.length
-  smallest_population_size = population_size.values.min
-  largest_population_size = population_size.values.max
+  number_of_species = uniq_specimens.length
+  smallest_species = species_count.values.min
+  largest_species = species_count.values.max
 
-  number_of_species ** 2 * smallest_population_size / largest_population_size
+  number_of_species ** 2 * smallest_species / largest_species
 end
 
 # ------------------------------------------------------------------------------
+# For C's Sake
 
-def for_fs_sake(string)
-  words = string.split
-  min_f_distance = nil
-  min_f_word = ""
+def for_cs_sake(string)
+  c_words = string.split.select { |word| word.downcase.include?("c") }
+  return "" if c_words.empty?
 
-  words.each do |word|
-    current_f_distance = find_f_distance(word)
-    if current_f_distance && (min_f_distance.nil? || current_f_distance < min_f_distance)
-      min_f_distance = current_f_distance
-      min_f_word = word
-    end
-  end
-
-  min_f_word
+  c_words.map! { |word| remove_punctuation(word) }
+  debugger
+  c_words.min_by { |word| c_distance(word) }
 end
 
-def find_f_distance(word)
-  index_at_end = word.length - 1
-  index = index_at_end
-  punctuation = ["!", ".", "?", "'", ","]
-  punctuation_count = 0
+def c_distance(word)
+  word.reverse.index("c")
+end
 
-  until index < 0
-    letter = word[index]
-    punctuation_count += 1 if punctuation.include?(letter)
-
-    break if letter == "f" || letter == "F"
-    index -= 1
-  end
-
-  if index >= 0
-    index_at_end - index - punctuation_count
-  else
-    nil
-  end
+def remove_punctuation(string)
+  string.delete("?,!.")
 end
 
 # ------------------------------------------------------------------------------
+# First Last Indicies
 
-def censor(sentence, curse_words)
-  words = sentence.split(" ")
+def first_last_indices(str)
+  answer = {}
 
-  asterisked_words = words.map do |word|
-    if curse_words.include?(word.downcase)
-      asterisked_word(word)
-    else
-      word
-    end
+  str.each_char do |c|
+    first_index  = first_occurence(str, c)
+    last_index  = last_occurence(str, c)
+    answer[c] = [first_index]
+    answer[c] << last_index if last_index != first_index
   end
 
-  asterisked_words.join(" ")
+  answer
 end
 
-def asterisked_word(word)
-  asterisked_array = word.split("")
-  asterisked_array.map! do |letter|
-    if ["a", "e", "i", "o", "u"].include?(letter)
-      "*"
-    else
-      letter
-    end
-  end
+def first_occurence(str, c)
+  str.index(c)
+end
 
-  asterisked_array.join("")
+def last_occurence(str, c)
+  str.length - str.reverse.index(c) - 1
 end

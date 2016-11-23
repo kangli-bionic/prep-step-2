@@ -35,29 +35,26 @@ puts remove_letter_a(words_2) == without_a_2
 
 # ------------------------------------------------------------------------------
 
-# Panoramic Pairs
+# Abundant
 
-# You have a panoramic view in front of you, but you only can take a picture of
-# two landmarks at a time (your camera is small).  You want to capture every
-# pair of landmarks that are next to each other.
-#
-# Given an array of landmarks, return every adjacent pair from left to right.
-# Assume the panorama wraps around.
+# An abundant number is a number that is less than the sum of its divisors,
+# not including itself.
 
-def panoramic_pairs(landmarks)
+# Ex. 12's divisors are 1, 2, 3, 4, 6, which sum to 16
+# 16 > 12 so 12 is an abundant number.
+
+# Write a function that takes a number and return true if the number is abundant
+# otherwise, return false.
+
+def abundant?(num)
 end
 
-puts "-------Panoramic Pairs-------"
-
-landmarks_1 = ["House", "Horse"]
-pairs_1 = [["House", "Horse"], ["Horse", "House"]]
-
-puts panoramic_pairs(landmarks_1) == pairs_1
-
-landmarks_2 = ["Tree", "Mountain", "Ocean", "Cottage"]
-pairs_2 = [["Tree", "Mountain"], ["Mountain", "Ocean"], ["Ocean", "Cottage"], ["Cottage", "Tree"]]
-
-puts panoramic_pairs(landmarks_2) == pairs_2
+puts "-------Abundant-------"
+puts abundant?(12) == true
+puts abundant?(24) == true
+puts abundant?(9) == false
+puts abundant?(10001) == false
+puts abundant?(20000) == true
 
 # ------------------------------------------------------------------------------
 

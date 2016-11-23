@@ -79,7 +79,6 @@ pairs_2 = [["Tree", "Mountain"], ["Mountain", "Ocean"], ["Ocean", "Cottage"], ["
 
 puts panoramic_pairs(landmarks_2) == pairs_2
 
-
 # ------------------------------------------------------------------------------
 
 # Xbonacci

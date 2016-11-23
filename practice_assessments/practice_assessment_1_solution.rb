@@ -1,38 +1,11 @@
+# Anagrams
 
-def word_with_most_repeats(sentence)
-  max_repeats = 0
-  words = sentence.split
-  max_repeated_word = words.first
-
-  words.each do |word|
-    number_of_repeats = get_number_of_repeats_in(word)
-
-    if number_of_repeats > max_repeats
-      max_repeats = number_of_repeats
-      max_repeated_word = word
-    end
-  end
-
-  max_repeated_word
-end
-
-def get_number_of_repeats_in(word)
-  repeats = 0
-  current_index = 0
-  letter_counts = Hash.new(0)
-  last_letter = nil
-
-  until current_index == word.length
-    current_letter = word[current_index]
-    letter_counts[current_letter] += 1
-
-    current_index += 1
-  end
-
-  letter_counts.count {|letter, num_occurrences| num_occurrences > 1}
+def anagrams?(str1, str2)
+  str1.chars.sort == str2.chars.sort
 end
 
 # ------------------------------------------------------------------------------
+# Isogram Matcher
 
 def isogram_matcher(isogram1, isogram2)
   idx_match = 0
@@ -50,41 +23,40 @@ def isogram_matcher(isogram1, isogram2)
 end
 
 # ------------------------------------------------------------------------------
+# Panoramic Pairs
 
-def xbonacci(starting_sequence, number_of_xbonacci_numbers_to_return)
-  how_many_numbers_to_sum = starting_sequence.length
+def panoramic_pairs(landmarks)
+  pairs = []
 
-  until starting_sequence.length == number_of_xbonacci_numbers_to_return
-    next_xbonacci_number = sum_of_last_n_numbers(starting_sequence, how_many_numbers_to_sum)
-    starting_sequence.push(next_xbonacci_number)
+  landmarks.each_with_index do |landmark, idx|
+    next_landmark = landmarks[idx + 1] || landmarks[0] # The || landmarks[0] allows us to wrap!
+    pairs << [landmark, next_landmark]
   end
 
-  starting_sequence
+  pairs
 end
 
-def sum_of_last_n_numbers(starting_sequence, how_many_numbers_to_sum)
-  sum = 0
-  current_index = starting_sequence.length - 1
-  end_index = starting_sequence.length - how_many_numbers_to_sum
-  end_index = 0 if end_index < 0
+# ------------------------------------------------------------------------------
+# Xbonacci
 
-  while current_index >= end_index
-    sum += starting_sequence[current_index]
-    current_index -= 1
+def xbonacci(starting_sequence, n)
+  result = starting_sequence
+  num_to_sum = starting_sequence.length
+
+  if n <= starting_sequence.length
+    return starting_sequence[0, n]
   end
 
-  sum
+  until result.length == n
+    last_n_numbers = result[-num_to_sum..-1]
+    debugger if !last_n_numbers
+    sum = array_sum(last_n_numbers)
+    result << sum
+  end
+
+  result
 end
 
-#------------------------------------------------------------------------------
-
-def cupcake_solver(cupcake_counts, number_of_students_in_class)
-  total_cupcakes = 0
-
-  cupcake_counts.each do |cupcake_count|
-    allotted_number = cupcake_count / number_of_students_in_class
-    total_cupcakes += allotted_number
-  end
-
-  total_cupcakes
+def array_sum(array)
+  array.reduce(0){ |sum, n| sum + n }
 end
