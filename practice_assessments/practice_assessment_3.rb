@@ -1,35 +1,24 @@
-# ------------------------------------------------------------------------------
 # Instructions
 # ------------------------------------------------------------------------------
 # This file is in the same format as your assessments.
 #
-# Make sure everything puts out as 'true' when you run the file.
+# You have 1 hour for this assessment. Give yourself about 15 minutes per problem.
+# Move on if you get stuck
 #
-# Give yourself an hour to complete this assessment.
-# When time is up, make sure you don't have any unexpected `end`s or infinite loops
-# that would keep your code from running.
+# Everything should print 'true' when you run the file. When time is up, make
+# sure you don't have any unexpected `end`s or infinite loops that would keep your
+# code from running.
 #
-# Rename the file to be your firstname and lastname.
-#
-# Do not use the internet.  If you forget a particular ruby method, write it yourself.
-#
-# Test your code with a few cases in addition to the ones we give
-# you.  When we grade you, we use different test cases to make sure your logic
-# is sound.
+# This assessment is strictly closed notes. No paper notes and no internet!
 #
 # Look at the test cases below the problem before you approach it.
-# Use the debugger when code doesn't run how you expect.
 # ------------------------------------------------------------------------------
-#
-#
+
 # In All Strings
-# ------------------------------------------------------------------------------
+
 # Check if a short_string is a substring of ALL of the long_strings
 
 def in_all_strings?(long_strings, short_string)
-  #
-  # your code goes here
-  #
 end
 
 puts "---------In All Strings-------"
@@ -38,20 +27,17 @@ puts in_all_strings?(["thisisaverylongstring", "thisisanotherverylongstring"], "
 puts in_all_strings?(["gandalf", "aragorn", "sauron"], "sam") == false
 puts in_all_strings?(["axe", "ajax", "axl rose"], "ax") == true
 
-# Biodiversity
 # ------------------------------------------------------------------------------
+
+# Biodiversity
+
 # Given an array of specimens, return the biodiversity index, which is defined
 # by the following formula: number_of_species^2 times the smallest_population_size
 # divided by the largest_population_size.
 
 # In code, biodiversity = number_of_species**2 * smallest_population_size / largest_population_size
-#
-# ------------------------------------------------------------------------------
 
 def biodiversity_index(specimens)
-  #
-  # your code goes here
-  #
 end
 
 puts "------Biodiversity------"
@@ -61,19 +47,16 @@ puts biodiversity_index(["cat", "cat", "dog"]) == 2
 puts biodiversity_index(["cat", "fly", "dog"]) == 9
 puts biodiversity_index(["cat", "fly", "dog", "dog", "cat", "cat"]) == 3
 
-# For F's Sake
 # ------------------------------------------------------------------------------
+
+# For F's Sake
+
 # Given a string, return the word that has the letter "f" closest to
 # the end of it.  If there's a tie, return the earlier word.  Ignore punctuation.
 #
 # If there's no f, return an empty string.
-# ------------------------------------------------------------------------------
-
 
 def for_fs_sake(string)
-  #
-  # your code goes here
-  #
 end
 
 puts "------For F's Sake------"
@@ -83,19 +66,29 @@ puts for_fs_sake("fat friars fly fish") == "fat"
 puts for_fs_sake("the French call him David Plouffe") == "Plouffe"
 puts for_fs_sake("pikachu! i choose you!") == ""
 
-
-
-# Censor
 # ------------------------------------------------------------------------------
-# Write a function censor(sentence, curse_words) that censors the words given.
-# Replace the vowels in the curse word with "*".
 
-def censor(sentence, curse_words)
-  #
-  # your code goes here
-  #
+# Write a functinon that takes a string and
+# returns a hash in which each key is a character in the string
+# pointing to an array indicating the index that the character
+# first occurs and last occurs.
+#
+# If the character occurs only once, the array should hold a single index
+#
+# Example:
+#
+# str = "banana"
+# return {"b" => [0], "a" => [1, 5], "n" => [2, 4]}
+# "b" occurs once at index 0
+# "a" occurs three times, but the first is at index 1 and the last is at index 5
+# "n" occurs three times, but the first is at index 2 and the last is at index 4
+
+def first_last_indices(str)
 end
 
-puts "------Censor------"
-puts censor("Darn you Harold you son of a gun", ["darn", "gun"]) == "D*rn you Harold you son of a g*n"
-puts censor("Schnikeys I don't give a diddly squat", ["schnikeys", "diddly", "squat"]) == "Schn*k*ys I don't give a d*ddly sq**t"
+
+puts "-------First Last Indices-------"
+puts first_last_indices("cat") == {"c" => [0], "a" => [1], "t" => [2]}
+puts first_last_indices("dude") == {"d" => [0, 2], "u" => [1], "e" => [3]}
+puts first_last_indices("banana") == {"b" => [0], "a" => [1, 5], "n" => [2, 4]}
+puts first_last_indices("racecar") == {"r" => [0, 6], "a" => [1, 5], "c" => [2, 4], "e" => [3]}

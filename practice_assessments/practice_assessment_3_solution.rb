@@ -1,28 +1,10 @@
 
-# In All Strings
-# ------------------------------------------------------------------------------
-# Check if a short_string is a substring of ALL of the long_strings
-
 def in_all_strings?(long_strings, short_string)
   long_strings.all? do |long_string|
     long_string.include?(short_string)
   end
 end
 
-puts "---------In All Strings-------"
-puts in_all_strings?(["thisisaverylongstring", "thisisanotherverylongstring"], "sisa") == true
-puts in_all_strings?(["thisisaverylongstring", "thisisanotherverylongstring"], "isan") == false
-puts in_all_strings?(["gandalf", "aragorn", "sauron"], "sam") == false
-puts in_all_strings?(["axe", "ajax", "axl rose"], "ax") == true
-
-# Biodiversity
-# ------------------------------------------------------------------------------
-# Given an array of specimens, return the biodiversity index, which is defined
-# by the following formula: number_of_species^2 times the smallest_population_size
-# divided by the largest_population_size.
-
-# In code, biodiversity = number_of_species**2 * smallest_population_size / largest_population_size
-#
 # ------------------------------------------------------------------------------
 
 def biodiversity_index(specimens)
@@ -38,22 +20,7 @@ def biodiversity_index(specimens)
   number_of_species ** 2 * smallest_population_size / largest_population_size
 end
 
-
-puts "------Biodiversity------"
-puts biodiversity_index(["cat"]) == 1
-puts biodiversity_index(["cat", "cat", "cat"]) == 1
-puts biodiversity_index(["cat", "cat", "dog"]) == 2
-puts biodiversity_index(["cat", "fly", "dog"]) == 9
-puts biodiversity_index(["cat", "fly", "dog", "dog", "cat", "cat"]) == 3
-
-# For F's Sake
 # ------------------------------------------------------------------------------
-# Given a string, return the word that has the letter "f" closest to
-# the end of it.  If there's a tie, return the earlier word.  Ignore punctuation.
-#
-# If there's no f, return an empty string.
-# ------------------------------------------------------------------------------
-
 
 def for_fs_sake(string)
   words = string.split
@@ -92,18 +59,7 @@ def find_f_distance(word)
   end
 end
 
-puts "------For F's Sake------"
-puts for_fs_sake("puff daddy") == "puff"
-puts for_fs_sake("I got a lot of problems with you people! And now you're gonna hear about it!") == "of"
-puts for_fs_sake("fat friars fly fish") == "fat"
-puts for_fs_sake("the French call him David Plouffe") == "Plouffe"
-puts for_fs_sake("pikachu! i choose you!") == ""
-
-
-# Censor
 # ------------------------------------------------------------------------------
-# Write a function censor(sentence, curse_words) that censors the words given.
-# Replace the vowels in the curse word with "*".
 
 def censor(sentence, curse_words)
   words = sentence.split(" ")
@@ -131,7 +87,3 @@ def asterisked_word(word)
 
   asterisked_array.join("")
 end
-
-puts "------Censor------"
-puts censor("Darn you Harold you son of a gun", ["darn", "gun"]) == "D*rn you Harold you son of a g*n"
-puts censor("Schnikeys I don't give a diddly squat", ["schnikeys", "diddly", "squat"]) == "Schn*k*ys I don't give a d*ddly sq**t"
