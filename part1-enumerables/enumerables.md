@@ -108,7 +108,7 @@ their receivers (`select!` and `reject!`).
 ```
 
 
-# `each_with_index` and `with_index`
+## `each_with_index` and `with_index`
 
 `each_with_index` works as you'd expect: it calls the given block with two
 arguments--the item and the item's index--once for each element in the method's
