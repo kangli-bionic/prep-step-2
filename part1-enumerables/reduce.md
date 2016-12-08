@@ -95,6 +95,39 @@ end
 sum_first_and_odds([1, 2, 4, 5]) #=> 6
 ```
 
+One also isn't limited to combining elements. The accumulator is simply a
+variable available throughout the iteration that's reassigned after each
+iteration. In Step 1's sixth practice assessment we wrote a method that
+determined the longest word in a string. Here's the original solution and one
+using `reduce`:
+
+```ruby
+# OLD SOLUTION
+def longest_word(str)
+  words = str.split
+  longest_word = ""
+
+  words.each do |word|
+    if word.length > longest_word.length
+      longest_word = word
+    end
+  end
+
+  longest_word
+end
+
+# REDUCED EXCELLENCE
+def longest_word(str)
+  str.split.reduce do |longest, word|
+    if word.length > longest.length
+      word
+    else
+      longest
+    end
+  end
+end
+```
+
 So far, the need to use the first element in the array as the accumulator limits
 the use cases for `reduce`. What about when we want to use a counter or a result
 array as the accumulator? The first element wouldn't suffice in most cases.
@@ -103,7 +136,115 @@ Enter the final way to invoke `reduce`.
 
 ## With a Block, With an Initial Accumulator
 
+There are two differences between invoking `reduce` with an argument _and_ a
+block versus with only a block:
+
+  1. The interpreter initially assigns the accumulator to the given argument.
+  2. The interpreter iterates through the _entire_ receiver, i.e., it does not skip the first element.
+
+Let's rewrite three methods from Prep Step 1 using this latest variation of
+`reduce`. We'll employ three different initial accumulator arguments: `0` as a
+counter, an empty string, and an empty array.
+
+In the first practice assessment, we asked you to define a method
+(`e_words(str)`) that accepts a string as an argument. This method returns the
+number of words in the string that end in the letter "e" (e.g., `e_words("Let be
+be finale of seem") => 3`). Here's the solution we provided:
+
+```ruby
+def e_words(str)
+  words = str.split
+  count = 0
+
+  words.each do |word|
+    count += 1 if word[-1] == "e"
+  end
+
+  count
+end
+```
+
+Take a moment to study an implementation using `reduce`:
+
+```ruby
+def e_words(str)
+  str.split.reduce(0) do |count, word|
+    if word[-1] == "e"
+      count + 1
+    else
+      count # return existing count from block so count isn't reassigned to nil
+    end
+  end
+end
+```
+
+Using `reduce` with an initial accumulator reduces defining a counter variable and iterating through a collection to one method invocation.
+
+In the fifth practice assessment, we asked you to define a method
+(`boolean_to_binary(arr)`), that accepts an array of booleans as an argument.
+The method should convert the array into a string of 1's (for `true` values) and
+0's (for `false` values) and return the result. Here's our solution as well as
+an implementation using `reduce` with an empty string as the initial
+accumulator:
+
+```ruby
+# OLD SOLUTION
+def boolean_to_binary(arr)
+  binary = ""
+
+  arr.each do |boolean|
+    if boolean
+      binary += "1"
+    else
+      binary += "0"
+    end
+  end
+
+  binary
+end
+
+# REDUCED EXCELLENCE
+def boolean_to_binary(arr)
+  arr.reduce("") do |str, boolean|
+    if boolean
+      str + "1"
+    else
+      str + "0"
+    end
+  end
+end
+```
+
+Think about how you might implement `factors(num)` using `reduce`. We wrote this method in the exercises for Control Flow. What value would serve as an initial accumulator, i.e., what should be available throughout the iteration? Try to code an implementation using `reduce` before looking at the solution:
+
+```ruby
+# OLD SOLUTION
+def factors(num)
+  factors = []
+  (1..num).each do |i|
+    if num % i == 0
+      factors << i
+    end
+  end
+  factors
+end
 
 
+# REDUCED EXCELLENCE
+def factors(num)
+  (1..num).reduce([]) do |factors, i|
+    if num % i == 0
+      factors << i
+    else
+      factors
+    end
+  end
+end
+```
 
-v. result array, count odds etc.
+`reduce` is complicated, but it's one of the most powerful built-in methods in
+Ruby. Whenever you find yourself setting a variable you reference throughout an
+iteration, consider using `reduce` to simplify your code.
+
+**Note:** The `reduce` method is synonymous with `inject`. `reduce` seems more
+descriptive, but you'll often see `inject` out in the Ruby wilds.
