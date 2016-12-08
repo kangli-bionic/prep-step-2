@@ -95,11 +95,10 @@ end
 sum_first_and_odds([1, 2, 4, 5]) #=> 6
 ```
 
-One also isn't limited to combining elements. The accumulator is simply a
-variable available throughout the iteration that's reassigned after each
-iteration. In Step 1's sixth practice assessment we wrote a method that
-determined the longest word in a string. Here's the original solution and one
-using `reduce`:
+Nor does one need to combine elements. The accumulator is simply a variable
+available throughout the iteration that's reassigned after each iteration. In
+Step 1's sixth practice assessment we wrote a method that determined the longest
+word in a string. Here's the original solution and one using `reduce`:
 
 ```ruby
 # OLD SOLUTION
