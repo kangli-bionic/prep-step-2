@@ -178,7 +178,8 @@ def e_words(str)
 end
 ```
 
-Using `reduce` with an initial accumulator reduces defining a counter variable and iterating through a collection to one method invocation.
+Using `reduce` with an initial accumulator reduces defining a counter variable
+and iterating through a collection to one method invocation.
 
 In the fifth practice assessment, we asked you to define a method
 (`boolean_to_binary(arr)`), that accepts an array of booleans as an argument.
@@ -215,7 +216,10 @@ def boolean_to_binary(arr)
 end
 ```
 
-Think about how you might implement `factors(num)` using `reduce`. We wrote this method in the exercises for Control Flow. What value would serve as an initial accumulator, i.e., what should be available throughout the iteration? Try to code an implementation using `reduce` before looking at the solution:
+Think about how you might implement `factors(num)` using `reduce`. We wrote this
+method in the exercises for Control Flow. What value would serve as an initial
+accumulator, i.e., what should be available throughout the iteration? Try to
+code an implementation using `reduce` before looking at the solution:
 
 ```ruby
 # OLD SOLUTION
