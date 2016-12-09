@@ -7,7 +7,8 @@ hash. `value?` is a synonym of `has_value?`.
 
 ```ruby
 a_hash_is_like_a_dictionary = {
-  "Wittgenstein"=> "The power of language to make everything look the same which appears in its crassest form in the dictionary",
+  "Wittgenstein"=> "The power of language to make everything look the same
+    which appears in its crassest form in the dictionary",
   Nabokov: "The reader should have a dictionary."
 }
 
