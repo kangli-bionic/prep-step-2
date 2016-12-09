@@ -17,10 +17,10 @@
   * [Methods](part2-hashes/methods.md)
   * [Iterators and Enumerables](part2-hashes/iterators_enumerables.md)
   * [Counter Hashes](part2-hashes/counter_hashes.md)
-  * [Quiz](part2-hashes/hash_quiz.md)
-  * [Exercises](part2-hashes/hash_exercises.md)
-  * [Solutions](part2-hashes/hash_solutions.md)
-  
+  * [Quiz](part2-hashes/quiz.md)
+  * [Exercises](part2-hashes/exercises.md)
+  * [Walkthrough](part2-hashes/walkthrough.md)
+
 * You're Almost There!
   * [One Final Test](part3-outro/final_test.md)
   * [Practice Assessments](part3-outro/assessments.md)
