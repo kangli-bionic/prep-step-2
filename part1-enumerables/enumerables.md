@@ -1,7 +1,7 @@
 # Enumerables
 
 The Enumerable module (don't worry about what a module is for now!) contains a
-set of methods called **enumerables** that primarily traverse collections
+set of methods called **enumerables** that primarily traverse or sort collections
 (ranges, arrays, and hashes). We'll concern ourselves with arrays until the next
 chapter, when we'll study hashes. You can already replicate the behavior of
 every enumerable, but these methods offer elegant solutions to common problems.
@@ -105,6 +105,23 @@ their receivers (`select!` and `reject!`).
   # WELCOME TO THE DANGER ZONE
   array_of_terms.select! {|t| t.length > 20} #=> ["talk of the promenaders", "the driver with his interrogating thumb"]
   array_of_terms #=> ["talk of the promenaders", "the driver with his interrogating thumb"]
+```
+
+
+## `sort_by`
+
+The `sort_by` method sorts its receiver by the return values of its elements
+when they are passed to the given block. It does not modify its receiver. Here's
+a method that uses `sort_by` to return an array of the words in its argument
+sorted by length.
+
+```ruby
+def words_by_length(str)
+  words = str.split
+  words.sort_by {|word| word.length}
+end
+
+words_by_length("As Gregor Samsa awoke one morning from uneasy dreams he found himself transformed in his bed into a gigantic insect") #=> ["a", "As", "he", "in", "his", "one", "bed", "into", "from", "found", "Samsa", "awoke", "insect", "Gregor", "dreams", "uneasy", "morning", "himself", "gigantic", "transformed"]
 ```
 
 
