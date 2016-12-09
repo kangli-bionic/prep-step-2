@@ -100,7 +100,8 @@ their receivers (`select!` and `reject!`).
       "The heavy omnibus", 'the driver with his interrogating thumb']
 
   array_of_terms.select {|t| t.length > 20} #=> ["talk of the promenaders", "the driver with his interrogating thumb"]
-  array_of_terms.reject {|t| t.length > 20} #=> ["The blab of the pave", "tires of carts", "sluff of boot-soles", "The heavy omnibus"]
+  array_of_terms.reject {|t| t.length > 20} #=> ["The blab of the pave", "tires of carts", "sluff of boot-soles",
+                                               # "The heavy omnibus"]
 
   # WELCOME TO THE DANGER ZONE
   array_of_terms.select! {|t| t.length > 20} #=> ["talk of the promenaders", "the driver with his interrogating thumb"]
@@ -121,7 +122,14 @@ def words_by_length(str)
   words.sort_by {|word| word.length}
 end
 
-words_by_length("As Gregor Samsa awoke one morning from uneasy dreams he found himself transformed in his bed into a gigantic insect") #=> ["a", "As", "he", "in", "his", "one", "bed", "into", "from", "found", "Samsa", "awoke", "insect", "Gregor", "dreams", "uneasy", "morning", "himself", "gigantic", "transformed"]
+poor_gregor = "As Gregor Samsa awoke one morning from uneasy dreams he found
+              himself transformed in his bed into a gigantic insect"
+
+words_by_length("As Gregor Samsa awoke one morning from uneasy dreams he found
+                himself transformed in his bed into a gigantic insect") #=> ["a",
+                # "As", "he", "in", "his", "one", "bed", "into", "from", "found",
+                # "Samsa", "awoke", "insect", "Gregor", "dreams", "uneasy", "morning",
+                # "himself", "gigantic", "transformed"]
 ```
 
 
