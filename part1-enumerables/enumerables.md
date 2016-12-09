@@ -111,9 +111,9 @@ their receivers (`select!` and `reject!`).
 ## `sort_by`
 
 The `sort_by` method sorts its receiver by the return values of its elements
-when they are passed to the given block. It does not modify its receiver. Here's
-a method that uses `sort_by` to return an array of the words in its argument
-sorted by length.
+when they are passed to the given block, and it returns an array in that order.
+`sort_by` does not modify its receiver. Here's a method that uses `sort_by` to
+return an array of the words in its argument sorted by length.
 
 ```ruby
 def words_by_length(str)
