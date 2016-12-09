@@ -2,7 +2,8 @@
     "plugins": [
         "expandable-chapters",
         "quiz",
-        "hide-element"
+        "hide-element",
+        "ga"
     ],
     "pluginsConfig": {
 
@@ -25,6 +26,9 @@
 
     "hide-element": {
           "elements": [".gitbook-link", "a:contains(setup)", ".custom-link"]
-      }
+      },
+      "ga": {
+         "token": "UA-34702721-1"
+     }
     }
 }
