@@ -15,7 +15,7 @@ Consider `["a", "b", "c", "d"]`:
 
 ## Declaration, Access, Assignment
 
-One declares an hash with curly braces. `{}` is an empty hash, i.e., a hash of
+One declares a hash with curly braces. `{}` is an empty hash, i.e., a hash of
 length zero. One can store key-value pairs in a hash by separating them with
 commas and enclosing them in curly braces. Each key points to its value via the
 **hash rocket** (`=>`). This hash is equivalent to `["a", "b", "c", "d"]`:
@@ -26,7 +26,6 @@ simple_hash = {0=>"a", 1=>"b", 2=>"c", 3=>"d"}
 
 # Access
 simple_hash[0] #=> "a"
-simple_hash[99] #=> nil (this key doesn't exist)
 ```
 
 Accessing values in a hash using keys has the same bracket syntax as accessing
@@ -80,9 +79,35 @@ nerdy_take_two[:true] #=> "Ruby first appeared in 1995."
 ```
 
 
+## Methods
 
 
 
+## Counter Hashes
+
+An alternative syntax for a declaring a hash is `Hash.new`. The `new` method
+takes an optional argument: the default value of each key. When one tries to
+access a nonexistent key in a hash with a default value, the return value is
+that default value. Accessing a nonexistent key, however, does not create a new
+key-value pair. Without setting a default value, accessing a nonexistent key
+returns `nil`.
+
+```ruby
+# without a default value
+dog_breeds = {"corgi"=>"short and sweet", "labrador"=>"labradorable"}
+dog_breeds["calico"] #=> nil
+
+# with a default value
+default_cuties = Hash.new("cutie")
+dog_breeds["vizsla"] #=> cutie
+
+# accessing a nonexistent key doesn't alter the hash
+dog_breeds #=> {}
+```
+
+Setting a default key is crucial for declaring a counter hash, one whose keys
+are the elements in a collection and whose values are the number of occurrences
+of that key in the collection.
 
 
 
