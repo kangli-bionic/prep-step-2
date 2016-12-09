@@ -133,6 +133,30 @@ animated_ranking.to_h #=> {"South Park"=>1, "Rick and Morty"=>2, "Archer"=>3}
 
 ## Iterators
 
+Hashes have a different set of iterators than arrays. They share `each`, but
+hashes also have the methods `each_key` and `each_value`. Hashes don't have an
+`each_index` method because they don't have indices! Because hashes store
+key-value pairs rather than individual elements, the syntax for iterating
+through them using `each` differs: the given block takes _two_ arguments, a key
+and a value.
+
+```ruby
+translations = {
+  Latin: "suum cuique",
+  English: "to each his own",
+  Russian: "каждому свое",
+  Spanish: "A cada cual lo suyo"
+}
+
+# each takes a block that takes two arguments: a key and value
+translations.each do {|k, v| puts "#{k}: #{v}"}  
+
+# each_key and each_value take a block that takes one argument: a key or a value
+translations.each_key do {|k| puts k}
+translations.each_value do {|v| puts v}
+```
+
+
 ## Enumerables
 
 ## Counter Hashes
