@@ -42,10 +42,10 @@ walrus_speculations.split.each do |word|
 end
 
 word_counts #=> {"if"=>1, "seven"=>2, "maids"=>1, "with"=>1, "mops"=>1, "swept"=>1,
-            # "it"=>3, "for"=>1, "half"=>1, "a"=>2, "year"=>1, "do"=>1, "you"=>1,
-            # "suppose"=>1, "the"=>2, "walrus"=>1, "said"=>2, "that"=>1, "they"=>1,
-            # "could"=>1, "get"=>1, "clear"=>1, "i"=>1, "doubt"=>1, "carpenter"=>1,
-            # "and"=>1, "shed"=>1, "bitter"=>1, "tear"=>1}
+            #    "it"=>3, "for"=>1, "half"=>1, "a"=>2, "year"=>1, "do"=>1, "you"=>1,
+            #    "suppose"=>1, "the"=>2, "walrus"=>1, "said"=>2, "that"=>1, "they"=>1,
+            #    "could"=>1, "get"=>1, "clear"=>1, "i"=>1, "doubt"=>1, "carpenter"=>1,
+            #    "and"=>1, "shed"=>1, "bitter"=>1, "tear"=>1}
 ```
 
 Counter hashes are especially powerful in combination with `sort_by`: one can
