@@ -87,10 +87,10 @@ that, when passed to that block, return a truthy value.
 ## `select` and `reject`
 
 Like `map`, `select` returns a new array, and like `all?`, `none?`, and `any?`,
-it evaluates each element in its receiver for truthiness. `select` returns an
-array containing all the elements of its receiver for which the given block
-returns a truthy value. `reject` does the opposite: it returns an array
-containing all the elements of its receiver for which the given block returns a
+it evaluates each element in its receiver for truthiness. `select` returns a
+collection containing all the elements in its receiver for which the given block
+returns a truthy value. `reject` does the opposite: it returns a collection
+containing all the elements in its receiver for which the given block returns a
 _falsey_ value. Both `select` and `reject` have dangerous versions that modify
 their receivers (`select!` and `reject!`).
 

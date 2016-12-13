@@ -7,7 +7,8 @@ is a professional! `reduce` can be invoked in three ways:
   2. With a block and without an argument. The block has two parameters: an accumulator and the current element.
   3. With a block and with one argument that's the initial accumulator. The block has two parameters: an accumulator and the current element.
 
-Let's examine each case.
+In every variation, `reduce` combines all elements of its receiver by applying a
+binary operation. Let's examine each case.
 
 
 ## With a Symbol
