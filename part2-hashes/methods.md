@@ -16,9 +16,9 @@ a_hash_is_like_a_dictionary.include?("Wittgenstein") #=> true
 a_hash_is_like_a_dictionary.has_value?("Arthur the Aardvark") #=> false
 ```
 
-The `keys` method returns an array of all the keys in its hash receiver. The
-`values` method returns an array of all the values. The `length` method returns
-the number of key-value pairs.
+The `keys` method returns an array of all the keys in its receiver. The `values`
+method returns an array of all the values. The `length` method returns the
+number of key-value pairs.
 
 ```ruby
 shorter_example_thankfully = {

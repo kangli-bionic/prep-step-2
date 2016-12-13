@@ -20,10 +20,11 @@ dog_breeds["vizsla"] #=> "cutie"
 dog_breeds #=> {}
 ```
 
-Setting a default value of `0` is helpful for creating a counter hash, one where
-each key is an element in the collection and each value is the number of
-occurrences of that key. Counter hashes allow one to elegantly solve many
-complex problems. Here's a counter hash in action:
+Setting a default value of `0` is helpful for creating a counter hash, one that
+counts the number of occurrences of particular elements or types of elements
+within a collection. Typically each key is an element in the collection and each
+value is the number of occurrences of that key. Counter hashes allow one to
+elegantly solve many complex problems. Here's a counter hash in action:
 
 ```ruby
 word_counts = Hash.new(0)
