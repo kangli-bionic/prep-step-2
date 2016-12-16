@@ -6,8 +6,9 @@
 
 * Enumerables
   * [Common Enumerables](part1-enumerables/enumerables.md)
+  * [Common Enumerables Quiz](part1-enumerables/enum_quiz.md)
   * [reduce](part1-enumerables/reduce.md)
-  * [Quiz](part1-enumerables/quiz.md)
+  * [reduce Quiz](part1-enumerables/reduce_quiz.md)
   * [Glossary](part1-enumerables/glossary.md)
   * [Exercises](part1-enumerables/exercises.md)
   * [Walkthrough](part1-enumerables/walkthrough.md)
