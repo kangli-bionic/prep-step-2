@@ -73,7 +73,7 @@ These two invocations of `reduce` are functionally equivalent:
 
 The second invocation is more explicit. The interpreter stores the first element
 of the array in the `acc` argument and adds every subsequent element in
-succession. After each iteration, the interpreter reassigns `acc` to the _return
+succession. After each iteration, the interpreter _reassigns `acc` to the return
 value of the block_. It returns `acc`  when no elements remain.  
 
 Invoking `reduce` with a block gives greater control over how to reduce the
