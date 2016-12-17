@@ -29,11 +29,19 @@ simple_hash[0] #=> "a"
 ```
 
 Accessing values in a hash using keys has the same bracket syntax as accessing
-values in an array using indices. The syntax for hash assignment is also
-equivalent:
+values in an array using indices. Accessing a nonexistent key returns `nil`:
 
 ```ruby
 simple_hash = {0=>"a", 1=>"b", 2=>"c", 3=>"d"}
+simple_hash[:mr_monkey_pants] #=> nil
+```
+
+The syntax for hash assignment is also the same as array assignment:
+
+```ruby
+simple_hash = {0=>"a", 1=>"b", 2=>"c", 3=>"d"}
+
+# Assignment
 simple_hash[0] = "z"
 
 simple_hash #=> {0=>"z", 1=>"b", 2=>"c", 3=>"d"}
