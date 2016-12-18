@@ -16,11 +16,11 @@ translations = {
 }
 
 # each takes a block that takes two arguments: a key and value
-translations.each do {|k, v| puts "#{k}: #{v}"}  
+translations.each {|k, v| puts "#{k}: #{v}"}  
 
 # each_key and each_value take a block that takes one argument: a key or a value
-translations.each_key do {|k| puts k}
-translations.each_value do {|v| puts v}
+translations.each_key {|k| puts k}
+translations.each_value {|v| puts v}
 ```
 
 Hashes have access to all the enumerables you've hopefully grown to love except
