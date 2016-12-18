@@ -151,10 +151,12 @@ straightforward:
   end
 ```
 
-If you'd prefer `map` to `each` (e.g., so you don't have to create a new array),
-you can chain the `with_index` method to `map`:
+If you'd prefer `map` to `each` (e.g., so you don't have to create a result array) or are iterating through a string,
+you can chain the `with_index` method to `map` or `each_char`.
 
 ```ruby
 back_to_the_numbers_game = [1, 2, 3]
 back_to_the_numbers_game.map.with_index {|num, i| num - i} #=> [1, 1, 1]
+
+"abcd".each_char.with_index {|ch, i| puts "#{ch} is letter number #{i + 1} in the alphabet!"} #=> "abcd" (returns receiver)
 ```
