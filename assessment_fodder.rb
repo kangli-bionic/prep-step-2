@@ -217,6 +217,24 @@ def ordered_vowel_word?(word)
   vowels_in_word == vowels_in_word.sort
 end
 
+def ordered_vowels(words)
+  words.select do |word|
+    ordered_vowel_word?(word)
+  end
+end
+
+# ****************************************************************************
+
+def non_unique_letters(string)
+  characters = string.chars.uniq
+  characters.delete(" ") # get rid of spaces!
+
+  characters.select do |char|
+    string.count(char) > 1
+  end
+end
+
+
 def no_repeat_year?(year)
   year_digits = year.to_s.chars
   year_digits == year_digits.uniq
