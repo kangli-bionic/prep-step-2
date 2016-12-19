@@ -1,19 +1,7 @@
 # EASY
 
-def get_evens(arr)
-  arr.select { |element| element.even? }
-end
-
 def array_sum(arr)
   arr.reduce(:+)
-end
-
-def calculate_doubles(arr)
-  arr.map {|el| el * 2}
-end
-
-def calculate_doubles!(arr)
-  arr.map! {|el| el * 2}
 end
 
 def in_all_strings?(long_strings, substring)
@@ -32,16 +20,6 @@ def longest_two_words(string)
   string.split.sort_by {|word| word.length}[-2..-1]
 end
 
-def array_sum_with_index(arr)
-  sum = 0
-
-  arr.each_with_index do |number, index|
-    sum += (number * index )
-  end
-
-  sum
-end
-
 
 # MEDIUM
 
@@ -50,19 +28,6 @@ def missing_letters(string)
   alphabet.reject do |el|
     string.downcase.include?(el)
   end
-end
-
-def price_is_right(bids, actual_retail_price)
-  lower_bids = bids.reject { |bid| bid > actual_retail_price}
-  lower_bids.max
-end
-
-def at_least_n_factors(numbers, n)
-  numbers.select { |number| num_factors(number) >= n }
-end
-
-def num_factors(number)
-  (1..number).count { |n| number % n == 0 }
 end
 
 def no_repeat_years(first_yr, last_yr)
@@ -96,33 +61,6 @@ def no_repeats?(song_name, songs)
   true
 end
 
-def products_except_me(numbers)
-  numbers.map.with_index do |num, idx|
-    sub_array = numbers[0...idx] + numbers[(idx + 1)..-1]
-    array_product(sub_array)
-  end
-end
-
-def array_product(array)
-  array.reduce(:*)
-end
-
-def ordered_vowel_words(words)
-  words.select do |word|
-    ordered_vowel_word?(word)
-  end
-end
-
-def ordered_vowel_word?(word)
-  vowels = "aeiou".chars
-
-  vowels_in_word = word.chars.select do |letter|
-    vowels.include?(letter)
-  end
-
-  vowels_in_word == vowels_in_word.sort
-end
-
 def for_cs_sake(string)
   c_words = string.split.select { |word| word.downcase.include?("c") }
   return "" if c_words.empty?
@@ -140,6 +78,9 @@ end
 def remove_punctuation(string)
   string.delete!(",.;:!?")
 end
+
+
+## TEST SUITE ##
 
 $success_count = 0
 $failure_count = 0
@@ -233,36 +174,20 @@ one_week_wonders_1 = ["Call Me Maybe"]
 top_hits_2 = ["Beat It", "Beat It", "Careless Whisper", "Beat It", "Baby", "Baby", "Never Gonna Give You Up", "Uptown Funk", "Uptown Funk", "Uptown Funk"]
 one_week_wonders_2 = ["Careless Whisper", "Never Gonna Give You Up"]
 
-test_get_evens([1,2,3,4,5], [2,4])
-test_get_evens([1,3], [])
 test_array_sum([1,2,3], 6)
 test_array_sum([0,0,0], 0)
-test_calculate_doubles([1,2,3], [2,4,6])
-test_calculate_doubles([], [])
-test_calculate_doubles!([1,2,3], [2,4,6])
-test_calculate_doubles([], [])
 test_in_all_strings?(["leopold", "leopard", "leonine"], "leo", true)
 test_in_all_strings?(["leopold", "leopard", "leonine"], "leop", false)
 test_non_unique_letters("abcdbcd", ["b", "c", "d"])
 test_non_unique_letters("abcde", [])
 test_longest_two_words(el_ciervo, ["Mulligan", "stairhead"])
 test_longest_two_words("yarg barg yaarga barga", ["barga", "yaarga"])
-test_array_sum_with_index([2, 9, 7], 23)
-test_array_sum_with_index([0, 0], 0)
 test_missing_letters(el_tigre, ["j", "k", "p", "q", "v", "x", "z"])
 test_missing_letters(("A".."Z").to_a.join, [])
-test_price_is_right([200, 2350, 1400, 1600], 1599, 1400)
-test_price_is_right([950, 850, 1000, 1], 1300, 1000)
-test_at_least_n_factors([1, 3, 10, 16], 5, [16])
-test_at_least_n_factors([1, 3, 10, 16], 2, [3,10,16])
 test_no_repeat_years(1990, 2000, [])
 test_no_repeat_years(2016, 2020,[2016, 2017, 2018, 2019])
 test_one_week_wonders(top_hits_1, one_week_wonders_1)
 test_one_week_wonders(top_hits_2, one_week_wonders_2)
-test_products_except_me([2, 3, 4], [12, 8, 6])
-test_products_except_me([1, 2, 3, 5], [30, 15, 10, 6])
-test_ordered_vowel_words(["era", "are", "ear"], ["are"])
-test_ordered_vowel_words(["hey", "wassup", "hello"], ["hey", "wassup", "hello"])
 test_for_cs_sake("r is among the most menacing of sounds. That's why they call it murder and not muckduck.",  "muckduck")
 test_for_cs_sake("muckduck cluck duck.", "muckduck")
 puts
