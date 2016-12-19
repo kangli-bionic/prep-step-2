@@ -19,6 +19,7 @@
   * [Iterators and Enumerables](part2-hashes/iterators_enumerables.md)
   * [Counter Hashes](part2-hashes/counter_hashes.md)
   * [Quiz](part2-hashes/quiz.md)
+  * [Glossary](part2-hashes/glossary.md)
   * [Exercises](part2-hashes/exercises.md)
   * [Walkthrough](part2-hashes/walkthrough.md)
 

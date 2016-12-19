@@ -1,53 +1,10 @@
-def get_evens(array)
-  array.select { |element| element.even? }
-end
-
-def reject_odds(array)
-  array.reject { |element| element.odd? }
-end
-
-def array_sum(array)
-  array.reduce(0) do |sum, number|
-    sum + number
-  end
-end
-
-def calculate_doubles(array)
-  array.map { |element| element * 2 }
-end
-
-def calculate_doubles!(array)
-  array.map! { |element| element * 2 }
-end
-
-def array_sum_with_index(array)
-  sum = 0
-
-  array.each_with_index do |number, index|
-    sum += ( number * index )
-  end
-
-  sum
-end
 
 def remove_nth_letter(string, n)
   string[0...n] + string[(n + 1)..-1]
 end
 
-def longest_two_words(string)
-  words = string.split
-  words.sort_by { |word| word.length }[-2..-1]
-end
-
 def substring?(long_string, short_string)
   long_string.include?(short_string)
-end
-
-def missing_letters(string)
-  alphabet = ("a".."z")
-  alphabet.reject do |el|
-    string.include?(el)
-  end
 end
 
 def chunk(array, n)
@@ -65,60 +22,6 @@ def chunk(array, n)
   results << chunk #add the last chunk, regardless of its length
 end
 
-def delete_first_letter(phrase, letter)
-  phrase.each_char.with_index do |character, idx|
-    if character == letter
-      phrase.slice!(idx) # deletes the character at idx from phrase
-      break
-    end
-  end
-
-  phrase
-end
-
-def in_all_strings?(long_strings, short_string)
-  long_strings.all? do |long_string|
-    long_string.include?(short_string)
-  end
-end
-
-# ------------------------------------------------------------------------------
-# Biodiversity Index
-
-def biodiversity_index(specimens)
-  uniq_specimens = specimens.uniq
-  species_count = {}
-
-  uniq_specimens.each do |species|
-    species_count[species] = specimens.count(species)
-  end
-
-  number_of_species = uniq_specimens.length
-  smallest_species = species_count.values.min
-  largest_species = species_count.values.max
-
-  number_of_species ** 2 * smallest_species / largest_species
-end
-
-# ------------------------------------------------------------------------------
-# For C's Sake
-
-def for_cs_sake(string)
-  c_words = string.split.select { |word| word.downcase.include?("c") }
-  return "" if c_words.empty?
-
-  c_words.map! { |word| remove_punctuation(word) }
-  debugger
-  c_words.min_by { |word| c_distance(word) }
-end
-
-def c_distance(word)
-  word.reverse.index("c")
-end
-
-def remove_punctuation(string)
-  string.delete("?,!.")
-end
 
 # ------------------------------------------------------------------------------
 # First Last Indicies
@@ -144,57 +47,10 @@ def last_occurence(str, c)
   str.length - str.reverse.index(c) - 1
 end
 
-# Price is Right
-
-def price_is_right(bids, actual_retail_price)
-  lower_bids = bids.reject { |bid| bid > actual_retail_price}
-  lower_bids.max
-end
-
-# ------------------------------------------------------------------------------
-# Products Except Me
-
-def products_except_me(numbers)
-  numbers.map.with_index do |num, idx|
-    sub_array = numbers[0...idx] + numbers[(idx + 1)..-1]
-    array_product(sub_array)
-  end
-end
-
-def array_product(array)
-  array.reduce(1) { |product, n| product * n }
-end
-
 # ------------------------------------------------------------------------------
 # At least N Factors
 
-def at_least_n_factors(numbers, n)
-  numbers.select { |number| num_factors(number) >= n }
-end
-
-def num_factors(number)
-  (1..number).count { |n| number % n == 0 }
-end
-
 # ------------------------------------------------------------------------------
-# One-week Wonders
-
-def one_week_wonders(songs)
-  uniq_songs = songs.uniq
-  uniq_songs.select do |song|
-    no_repeats?(song, songs)
-  end
-end
-
-def no_repeats?(song_name, songs)
-  songs.each_with_index do |song, idx|
-    if song == song_name
-      return false if song == songs[idx + 1]
-    end
-  end
-
-  true
-end
 
 def anagram?(string1, string2)
   string1.chars.sort == string2.chars.sort
@@ -206,45 +62,7 @@ def anagrams(string, array)
   end
 end
 
-
-def ordered_vowel_word?(word)
-  vowels = "aeiou".chars
-
-  vowels_in_word = word.chars.select do |letter|
-    vowels.include?(letter)
-  end
-
-  vowels_in_word == vowels_in_word.sort
-end
-
-def ordered_vowels(words)
-  words.select do |word|
-    ordered_vowel_word?(word)
-  end
-end
-
 # ****************************************************************************
-
-def non_unique_letters(string)
-  characters = string.chars.uniq
-  characters.delete(" ") # get rid of spaces!
-
-  characters.select do |char|
-    string.count(char) > 1
-  end
-end
-
-
-def no_repeat_year?(year)
-  year_digits = year.to_s.chars
-  year_digits == year_digits.uniq
-end
-
-def no_repeat_years(first_yr, last_yr)
-  (first_yr..last_yr).select do |year|
-    no_repeat_year?(year)
-  end
-end
 
 # ****************************************************************************
 
@@ -278,4 +96,10 @@ def pig_latin(sentence)
   words = sentence.split
   words.map! { |word| latinify(word) }
   words.join(" ")
+end
+
+# Define a method that accepts a phrase and a letter as arguments. Your method should
+# remove the first instance of that letter
+def delete_first_letter(phrase, letter)
+
 end

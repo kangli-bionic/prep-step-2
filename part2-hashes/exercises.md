@@ -144,4 +144,19 @@ def fall_and_winter_birthdays(students_with_birthdays)
 
   result
 end
+
+def biodiversity_index(specimens)
+  uniq_specimens = specimens.uniq
+  species_count = {}
+
+  uniq_specimens.each do |species|
+    species_count[species] = specimens.count(species)
+  end
+
+  number_of_species = uniq_specimens.length
+  smallest_species = species_count.values.min
+  largest_species = species_count.values.max
+
+  number_of_species ** 2 * smallest_species / largest_species
+end
 ```
