@@ -174,20 +174,28 @@ one_week_wonders_1 = ["Call Me Maybe"]
 top_hits_2 = ["Beat It", "Beat It", "Careless Whisper", "Beat It", "Baby", "Baby", "Never Gonna Give You Up", "Uptown Funk", "Uptown Funk", "Uptown Funk"]
 one_week_wonders_2 = ["Careless Whisper", "Never Gonna Give You Up"]
 
+puts "\narray_sum:\n" + "*" * 15 + "\n"
 test_array_sum([1,2,3], 6)
 test_array_sum([0,0,0], 0)
+puts "\nin_all_strings?:\n" + "*" * 15 + "\n"
 test_in_all_strings?(["leopold", "leopard", "leonine"], "leo", true)
 test_in_all_strings?(["leopold", "leopard", "leonine"], "leop", false)
+puts "\nnon_unique_letters:\n" + "*" * 15 + "\n"
 test_non_unique_letters("abcdbcd", ["b", "c", "d"])
 test_non_unique_letters("abcde", [])
+puts "\nlongest_two_words:\n" + "*" * 15 + "\n"
 test_longest_two_words(el_ciervo, ["Mulligan", "stairhead"])
 test_longest_two_words("yarg barg yaarga barga", ["barga", "yaarga"])
+puts "\nmissing_letters:\n" + "*" * 15 + "\n"
 test_missing_letters(el_tigre, ["j", "k", "p", "q", "v", "x", "z"])
 test_missing_letters(("A".."Z").to_a.join, [])
+puts "\nno_repeat_years:\n" + "*" * 15 + "\n"
 test_no_repeat_years(1990, 2000, [])
 test_no_repeat_years(2016, 2020,[2016, 2017, 2018, 2019])
+puts "\none_week_wonders:\n" + "*" * 15 + "\n"
 test_one_week_wonders(top_hits_1, one_week_wonders_1)
 test_one_week_wonders(top_hits_2, one_week_wonders_2)
+puts "\nfor_cs_sake:\n" + "*" * 15 + "\n"
 test_for_cs_sake("r is among the most menacing of sounds. That's why they call it murder and not muckduck.",  "muckduck")
 test_for_cs_sake("muckduck cluck duck.", "muckduck")
 puts
