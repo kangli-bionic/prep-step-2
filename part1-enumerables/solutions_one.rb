@@ -153,20 +153,28 @@ def print_test(method_name, args, expectation)
     $failure_count += 1
 end
 
+puts "\nget_evens:\n" + "*" * 15 + "\n"
 test_get_evens([1,2,3,4,5], [2,4])
 test_get_evens([1,3], [])
+puts "\ncalculate_doubles:\n" + "*" * 15 + "\n"
 test_calculate_doubles([1,2,3], [2,4,6])
 test_calculate_doubles([], [])
+puts "\ncalculate_doubles!:\n" + "*" * 15 + "\n"
 test_calculate_doubles!([1,2,3], [2,4,6])
 test_calculate_doubles([], [])
+puts "\narray_sum_with_index:\n" + "*" * 15 + "\n"
 test_array_sum_with_index([2, 9, 7], 23)
 test_array_sum_with_index([0, 0], 0)
+puts "\nprice_is_right:\n" + "*" * 15 + "\n"
 test_price_is_right([200, 2350, 1400, 1600], 1599, 1400)
 test_price_is_right([950, 850, 1000, 1], 1300, 1000)
+puts "\nat_least_n_factors:\n" + "*" * 15 + "\n"
 test_at_least_n_factors([1, 3, 10, 16], 5, [16])
 test_at_least_n_factors([1, 3, 10, 16], 2, [3,10,16])
+puts "\nordered_vowel_words:\n" + "*" * 15 + "\n"
 test_ordered_vowel_words(["era", "are", "ear"], ["are"])
 test_ordered_vowel_words(["hey", "wassup", "hello"], ["hey", "wassup", "hello"])
+puts "\nproducts_except_me:\n" + "*" * 15 + "\n"
 test_products_except_me([2, 3, 4], [12, 8, 6])
 test_products_except_me([1, 2, 3, 5], [30, 15, 10, 6])
 
