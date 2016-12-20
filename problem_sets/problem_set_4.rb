@@ -66,41 +66,7 @@ puts time_sums(24) == ["19:59"]
 def fall_and_winter_birthdays(students_with_birthdays)
 end
 
-students_with_birthdays_1 = {
-  "Asher" => 6,
-  "Bertie" => 11,
-  "Dottie" => 8,
-  "Warren" => 9
-}
 
-second_half_birthday_pairs_1 = [
-  ["Bertie", "Dottie"],
-  ["Bertie", "Warren"],
-  ["Dottie", "Warren"]
-]
-
-students_with_birthdays_2 = {
-  "Asher" => 6,
-  "Bertie" => 11,
-  "Dottie" => 8,
-  "Warren" => 9,
-  "Charlie" => 7,
-  "Nassim" => 4,
-  "Ajit" => 10,
-}
-
-second_half_birthday_pairs_2 = [
-  ["Bertie", "Dottie"],
-  ["Bertie", "Warren"],
-  ["Bertie", "Charlie"],
-  ["Bertie", "Ajit"],
-  ["Dottie", "Warren"],
-  ["Dottie", "Charlie"],
-  ["Dottie", "Ajit"],
-  ["Warren", "Charlie"],
-  ["Warren", "Ajit"],
-  ["Charlie", "Ajit"],
-]
 
 puts "\nFall and Winter Birthdays\n" + "*" * 15 + "\n"
 puts fall_and_winter_birthdays(students_with_birthdays_1) == second_half_birthday_pairs_1
