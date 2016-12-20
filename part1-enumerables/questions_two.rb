@@ -5,7 +5,6 @@ def array_sum(arr)
 
 end
 
-
 # Define a method that returns a boolean indicating whether substring is a substring of all the long_strings (an array).
 def in_all_strings?(long_strings, substring)
 
@@ -41,7 +40,7 @@ end
 
 # HARD
 
-# Given a an array of songs at the top of the charts, return the songs that only stayed on the chart for a week at a time. Each element corresponds to a song at the top of the charts for one particular week.
+# Define a method that, given an array of songs at the top of the charts, returns the songs that only stayed on the chart for a week at a time. Each element corresponds to a song at the top of the charts for one particular week.
 # Songs CAN reappear on the chart, but if they don't appear in consecutive weeks, they're "one-week wonders."
 # Suggested strategy: find the songs that appear multiple times in a row and remove them.
 # You may wish to write a helper method no_repeats?
@@ -54,7 +53,7 @@ def no_repeats?(song_name, songs)
 end
 
 
-# Given a string of words, return the word that has the letter "c" closest to the end of it. If there's a tie, return the earlier word. Ignore punctuation. If there's no "c", return an empty string. You may wish to write the helper methods c_distance and remove_punctuation.
+# Define a method that, given a string of words, returns the word that has the letter "c" closest to the end of it. If there's a tie, return the earlier word. Ignore punctuation. If there's no "c", return an empty string. You may wish to write the helper methods c_distance and remove_punctuation.
 def for_cs_sake(string)
 
 end
@@ -64,5 +63,12 @@ def c_distance(word)
 end
 
 def remove_punctuation(string)
+
+end
+
+# Define a method that, given an array of numbers, returns a nested array of two-element arrays that each contain the start and end indices of whenever a number appears multiple times in a row.
+# repeated_number_ranges([1, 1, 2]) => [[0, 1]]
+# repeated_number_ranges([1, 2, 3, 3, 4, 4]) => [[2, 3], [4, 5]]
+def repeated_number_ranges(arr)
 
 end

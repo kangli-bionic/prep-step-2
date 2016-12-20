@@ -79,6 +79,27 @@ def remove_punctuation(string)
   string.delete!(",.;:!?")
 end
 
+def repeated_number_ranges(numbers)
+  ranges = []
+  start_index = nil
+
+  # start walking
+  # set the start_index when we're at the beginning of a range
+  # when we reach the end of a range, add the range to the list and reset the start_index
+
+  numbers.each_with_index do |el, idx|
+    next_el = numbers[idx + 1]
+    if el == next_el
+      start_index = idx if start_index.nil?
+    elsif start_index # i.e., if the start index isn't nil (the numbers switched)
+      ranges.push([start_index, idx])
+      start_index = nil # reset the start_index to nil so we can capture more ranges
+    end
+  end
+
+  ranges
+end
+
 
 ## TEST SUITE ##
 
@@ -198,6 +219,9 @@ test_one_week_wonders(top_hits_2, one_week_wonders_2)
 puts "\nfor_cs_sake:\n" + "*" * 15 + "\n"
 test_for_cs_sake("r is among the most menacing of sounds. That's why they call it murder and not muckduck.",  "muckduck")
 test_for_cs_sake("muckduck cluck duck.", "muckduck")
+puts "\nrepeated_number_ranges:\n" + "*" * 15 + "\n"
+test_repeated_number_ranges([1, 1, 2], [[0, 1]])
+test_repeated_number_ranges([8, 7, 7, 14, 12, 12, 12, 12, 21], [[1, 2], [4, 7]])
 puts
 puts "TOTAL CORRECT: #{$success_count} / #{$success_count + $failure_count}"
 puts "TOTAL FAILURES: #{$failure_count}"
