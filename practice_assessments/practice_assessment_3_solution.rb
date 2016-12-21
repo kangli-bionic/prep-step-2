@@ -129,12 +129,16 @@ def print_test(method_name, args, expectation)
     $failure_count += 1
 end
 
+puts "\wremove_nth_letter:\n" + "*" * 15 + "\n"
 test_remove_nth_letter("helloworld", 5, "helloorld")
 test_remove_nth_letter("helloworld", -3, "hellowold")
+puts "\wchunk:\n" + "*" * 15 + "\n"
 test_chunk([1,2,3,4,5], 2, [[1,2], [3,4], [5]])
 test_chunk([1, 8, 9, 4, "hey", "there"], 2, [[1, 8], [9, 4], ["hey", "there"]])
-test_product_punctuation("!.,;?", 1)
+puts "\wproduct_punctuation:\n" + "*" * 15 + "\n"
+test_product_punctuation("!.,-;?", 1)
 test_product_punctuation("There's a certain Slant of light, Winter Afternoons - That oppresses, like the Heft Of Cathedral Tunes - ", 4)
+puts "\wpig_latin:\n" + "*" * 15 + "\n"
 test_pig_latin("i speak pig latin", "iay eakspay igpay atinlay")
 test_pig_latin("throw me an aardvark", "owthray emay anay aardvarkay")
 puts
