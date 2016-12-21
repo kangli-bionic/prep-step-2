@@ -126,10 +126,13 @@ def print_test(method_name, args, expectation)
     $failure_count += 1
 end
 
+puts "\wsubstring?:\n" + "*" * 15 + "\n"
 test_substring?("thisisaverylongstring", "sisa", true)
 test_substring?("thisisaverylongstring", "ting", false)
+puts "\wfirst_last_indices:\n" + "*" * 15 + "\n"
 test_first_last_indices("banana", {"b" => [0], "a" => [1, 5], "n" => [2, 4]})
 test_first_last_indices("racecar", {"r" => [0, 6], "a" => [1, 5], "c" => [2, 4], "e" => [3]})
+puts "\wcount_adjacent_sums:\n" + "*" * 15 + "\n"
 test_count_adjacent_sums([1, 5, 1, 3, 3], 6, 2)
 test_count_adjacent_sums([7, 2, 4, 6, 8, 10], 7, 0)
 puts
