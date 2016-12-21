@@ -137,12 +137,16 @@ without_a_1 = ["blueberry", "pple", "bnn", "pech"]
 words_2 = ["syllabus", "smirk", "salamander", "saaaaaaa"]
 without_a_2 = ["syllbus", "smirk", "slmnder", "s"]
 
+puts "\wremove_letter_a:\n" + "*" * 15 + "\n"
 test_remove_letter_a(words_1, without_a_1)
 test_remove_letter_a(words_2, without_a_2)
+puts "\wabundant?:\n" + "*" * 15 + "\n"
 test_abundant?(10001, false)
 test_abundant?(20000, true)
+puts "\wgreatest_common_factor:\n" + "*" * 15 + "\n"
 test_greatest_common_factor(4, 7, 1)
 test_greatest_common_factor(10, 15, 5)
+puts "\wword_with_most_repeats:\n" + "*" * 15 + "\n"
 test_word_with_most_repeats("good luck", "good")
 test_word_with_most_repeats("what if there is a tie betwixt words", "there")
 puts
