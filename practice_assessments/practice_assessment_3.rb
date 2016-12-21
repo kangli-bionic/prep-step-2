@@ -9,7 +9,7 @@ def chunk(array, n)
 
 end
 
-# Define a method that multiplies the frequencies of the periods, commas, semicolons, question marks, and exclamation points in a given string and returns the product.
+# Define a method that multiplies the frequencies of the periods, commas, hyphens, semicolons, question marks, and exclamation points in a given string and returns the product.
 def product_punctuation(str)
 
 end
