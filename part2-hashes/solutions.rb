@@ -253,25 +253,34 @@ second_half_birthday_pairs_2 = [
   ["Charlie", "Ajit"],
 ]
 
-
+puts "\wword_lengths:\n" + "*" * 15 + "\n"
 test_word_lengths(inferno, {"Nel"=>3, "mezzo"=>5, "del"=>3, "cammin"=>6, "di"=>2, "nostra"=>6, "vita"=>4, "mi"=>2, "ritrovai"=>8, "per"=>3, "una"=>3, "selva"=>5, "oscura"=>6})
 test_word_lengths(catullus_v, {"Vivamus"=>7, "mea"=>3, "Lesbia"=>6, "atque"=>5, "amemus"=>6})
+puts "\wgreatest_key_by_val:\n" + "*" * 15 + "\n"
 test_greatest_key_by_val({a: 100, b: 1, c: 50}, :a)
 test_greatest_key_by_val({a: 1, b: 100, c: 50}, :b)
+puts "\wupdate_inventory:\n" + "*" * 15 + "\n"
 test_update_inventory(march, april, {rubies: 10, emeralds: 27, diamonds: 2, moonstones: 5})
 test_update_inventory(pallet_town, elite_four, {pokeball: 25, potion: 2, hyper_potion: 52})
+puts "\wletter_counts:\n" + "*" * 15 + "\n"
 test_letter_counts("hi", { 'h' => 1, 'i' => 1 })
 test_letter_counts("hello", { 'h' => 1, 'e' => 1 , 'l' => 2, 'o' => 1})
+puts "\wuniq:\n" + "*" * 15 + "\n"
 test_uniq([1,1,2,2,3], [1,2,3])
 test_uniq([1,1,1], [1])
+puts "\wevens_and_odds:\n" + "*" * 15 + "\n"
 test_evens_and_odds([1,2,3], {"even" => 1, "odd" => 2})
 test_evens_and_odds([0,2], {"even" => 2, "odd" => 0})
+puts "\wmost_common_vowel:\n" + "*" * 15 + "\n"
 test_most_common_vowel(catullus_v, "a")
 test_most_common_vowel("eeaa", "a")
+puts "\wfall_and_winter_birthdays:\n" + "*" * 15 + "\n"
 test_fall_and_winter_birthdays(students_with_birthdays_1, second_half_birthday_pairs_1)
 test_fall_and_winter_birthdays(students_with_birthdays_2, second_half_birthday_pairs_2)
+puts "\wbiodiversity_index:\n" + "*" * 15 + "\n"
 test_biodiversity_index(["cat", "cat", "cat"], 1)
 test_biodiversity_index(["cat", "leopard-spotted ferret", "dog"], 9)
+puts "\wcan_tweak_sign?:\n" + "*" * 15 + "\n"
 test_can_tweak_sign?("We're having a yellow ferret sale for a good cause over at the pet shop!", "Leopard ferrets forever yo", true)
 test_can_tweak_sign?("Get on down to real fake doors", "None of them open!", false)
 puts
