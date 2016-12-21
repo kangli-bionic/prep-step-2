@@ -140,12 +140,16 @@ pairs_1 = [["House", "Horse"], ["Horse", "House"]]
 landmarks_2 = ["Tree", "Mountain", "Ocean", "Cottage"]
 pairs_2 = [["Tree", "Mountain"], ["Mountain", "Ocean"], ["Ocean", "Cottage"], ["Cottage", "Tree"]]
 
+puts "\wanagrams?:\n" + "*" * 15 + "\n"
 test_anagrams?("desert", "rested", true)
 test_anagrams?("banana", "fofanna", false)
+puts "\wisogram_matcher:\n" + "*" * 15 + "\n"
 test_isogram_matcher("or", "go", [0,1])
 test_isogram_matcher("unpredictably", "hydromagnetic", [1,8])
+puts "\wpanoramic_pairs:\n" + "*" * 15 + "\n"
 test_panoramic_pairs(landmarks_1, pairs_1)
 test_panoramic_pairs(landmarks_2, pairs_2)
+puts "\wxbonacci:\n" + "*" * 15 + "\n"
 test_xbonacci([1, 1], 5, [1, 1, 2, 3, 5])
 test_xbonacci([1, 1, 1, 1], 8, [1, 1, 1, 1, 4, 7, 13, 25])
 puts
