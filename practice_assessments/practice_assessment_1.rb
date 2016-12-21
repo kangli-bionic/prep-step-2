@@ -1,26 +1,6 @@
-# Instructions
-# ------------------------------------------------------------------------------
-# This file is in the same format as your assessments.
-#
-# You have 1 hour for this assessment. Give yourself about 15 minutes per problem.
-# Move on if you get stuck
-#
-# Everything should print 'true' when you run the file. When time is up, make
-# sure you don't have any unexpected `end`s or infinite loops that would keep your
-# code from running.
-#
-# This assessment is strictly closed notes. No paper notes and no internet!
-#
-# Look at the test cases below the problem before you approach it.
-# ------------------------------------------------------------------------------
-
-# Anagrams
-
-# Anagrams are two words with the exact same letters. Order does not matter.
-# Write a method that accepts two strings and returns true if they are anagrams,
-# false if they are not.
-
+# Anagrams are two words with exactly the same letters. Order does not matter. Define a method that, given two strings, returns a boolean indicating whether they are anagrams.
 def anagrams?(str1, str2)
+
 end
 
 puts "-------Anagrams-------"
@@ -33,13 +13,9 @@ puts anagrams?("meat master", "team stream") == true
 
 # Isogram Matcher
 
-# An isogram is a word with only unique, non-repeating letters. Given two isograms
-# of the same length, return an array with two numbers indicating matches:
-# the first number is the number of letters matched in both words at the same position,
-# and the second is the number of letters matched in both words but not in the
-# same position.
-
+# An isogram is a word of only non-repeating letters. Define a method that, given two isograms of the same length, returns an array of two elements indicating matches: the first number is the number of letters matched in both words at the same position, and the second is the number of letters matched in both words but not in the same position.
 def isogram_matcher(isogram1, isogram2)
+
 end
 
 puts "-------Isogram Matcher-------"
@@ -55,15 +31,7 @@ puts isogram_matcher("unpredictably", "hydromagnetic") == [1, 8]
 
 # ------------------------------------------------------------------------------
 
-# Panoramic Pairs
-
-# You have a panoramic view in front of you, but you only can take a picture of
-# two landmarks at a time (your camera is small).  You want to capture every
-# pair of landmarks that are next to each other.
-#
-# Given an array of landmarks, return every adjacent pair from left to right.
-# Assume the panorama wraps around.
-
+# You have a panoramic view in front of you, but you only can take a picture of two landmarks at a time (your camera is small). You want to capture every pair of landmarks that are next to each other. Define a method that, given an array of landmarks, returns an array of every adjacent pair from left to right. Assume the panorama wraps around.
 def panoramic_pairs(landmarks)
 end
 
@@ -83,7 +51,7 @@ puts panoramic_pairs(landmarks_2) == pairs_2
 
 # Xbonacci
 
-# Write a Xbonacci function that works similarly to the fibonacci sequence.
+# Define a Xbonacci method that works similarly to the fibonacci sequence.
 # The fibonacci sequence takes the previous two numbers in the sequence and adds
 # them together to create the next number.
 #
@@ -94,14 +62,16 @@ puts panoramic_pairs(landmarks_2) == pairs_2
 # In Xbonacci, the sum of the previous X numbers (instead of the previous 2 numbers)
 # of the sequence becomes the next number in the sequence.
 #
-# The method will take two inputs: the starting sequence with X number of
-# elements and an integer N, and return the first N elements in the given
-# sequence.  Take a look at the test cases for examples.
+# The method will take two arguments: the starting sequence with X number of
+# elements and an integer N. The method will return the first N elements in the given
+# sequence.
 #
-# In the code, how_many_numbers_to_sum is the same as X (name your variables
-# descriptively!).
+# xbonacci([1, 1], 5) => [1, 1, 2, 3, 5]
+# xbonacci([1, 1, 1, 1], 8) => [1, 1, 1, 1, 4, 7, 13, 25]
 #
-# In the code, number_of_fibonacci_numbers_to_return is the same as N.
+# X is the length of the starting sequence.
+#
+# number_of_xbonacci_numbers_to_return is the same as N.
 
 def xbonacci(starting_sequence, number_of_xbonacci_numbers_to_return)
 end
