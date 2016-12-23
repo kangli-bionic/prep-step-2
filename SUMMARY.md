@@ -11,7 +11,8 @@
   * [reduce Quiz](part1-enumerables/reduce_quiz.md)
   * [Glossary](part1-enumerables/glossary.md)
   * [Exercises](part1-enumerables/exercises.md)
-  * [Walkthrough](part1-enumerables/walkthrough.md)
+  * [Enumerables 1 Walkthrough](part1-enumerables/walkthrough_one.md)
+  * [Enumerables 2 Walkthrough](part1-enumerables/walkthrough_two.md)
 
 * Hashes
   * [Declaration, Access, Assignment](part2-hashes/daa.md)
