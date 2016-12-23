@@ -1,53 +1,123 @@
-# Hash Solutions
+# Walkthrough
 
-0. Write a method, `#word_lengths(string)` that, given a sentence, returns a hash of each of the words and their lengths.
+<iframe src="https://player.vimeo.com/video/196896268?rel=0&autoplay=1" width="100%" height="400px" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="line-height: 1.6em;" rel="line-height: 1.6em;"></iframe>
 
-  ```ruby
-    def word_lengths(string)
-      result = {}
-      words = string.split
 
-      words.each do |word|
-        result[word] = word.length
-      end
+## Solutions
+```ruby
+# EASY
+def word_lengths(str)
+  lengths = {}
+  words = str.split
+  words.each {|word| lengths[word] = word.length}
+  lengths
+end
 
-      result
+def greatest_key_by_val(hash)
+  hash.sort_by {|k, v| v}[-1][0]
+end
+
+def update_inventory(older, newer)
+  newer.each do |key, value|
+    older[key] = value
+  end
+
+  older
+end
+
+def letter_counts(word)
+  count = Hash.new(0)
+
+  word.each_char do |char|
+    count[char] += 1
+  end
+
+  count
+end
+
+
+# MEDIUM
+
+def uniq(arr)
+  mine_for_keys = {}
+  arr.each {|el| mine_for_keys[el] = true}
+  mine_for_keys.keys
+end
+
+def evens_and_odds(numbers)
+  count = {"even" => 0, "odd" => 0}
+
+  numbers.each do |number|
+    count["even"] += 1 if number.even?
+    count["odd"] += 1 if number.odd?
+  end
+
+  count
+end
+
+def most_common_vowel(string)
+  vowels = %w(a e i o u)
+  counts = Hash.new(0) # Give the hash a default value of 0
+
+  string.each_char do |character|
+    counts[character] += 1 if vowels.include?(character)
+  end
+
+  counts.sort_by {|k, v| v}.last.first
+end
+
+
+# HARD
+
+def fall_and_winter_birthdays(students_with_birthdays)
+  students = students_with_birthdays.select do |student, month|
+    month >= 7
+  end
+
+  names = students.keys
+  result = []
+
+  names.each_index do |idx1|
+    ((idx1 + 1)...names.length).each_index do |idx2|
+      result << [ names[idx1], names[idx2] ]
     end
-  ```
+  end
 
-0. Write a method, `#uniq(array)` that returns an array with only the unique values in the array. (Hint: use a hash!) Don't use the `Array#uniq` method here.
+  result
+end
 
-  ```ruby
-    def uniq(array)
-      counter = Hash.new(0)
+def biodiversity_index(specimens)
+  uniq_specimens = specimens.uniq
+  species_count = {}
 
-      array.each do |el|
-        counter[el] += 1
-      end
+  uniq_specimens.each do |species|
+    species_count[species] = specimens.count(species)
+  end
 
-      uniques = []
-      counter.each do |key, val|
-        uniques << key if val == 1
-      end
+  number_of_species = uniq_specimens.length
+  smallest_species = species_count.values.min
+  largest_species = species_count.values.max
 
-      uniques
-    end
-  ```
+  number_of_species ** 2 * smallest_species / largest_species
+end
 
-0. Write a method, `#greatest_key_by_val(hash)` that takes in a hash with any keys but only integers for values, and returns the key with the largest value.
+def can_tweak_sign?(normal_sign, vandalized_sign)
+  normal_count = character_count(normal_sign)
+  vandalized_count = character_count(vandalized_sign)
 
-  ```ruby
-    def greatest_key_by_val(hash)
-      current_best_val = nil
-      current_best_key = nil
+  vandalized_count.all? do |character, count|
+    normal_count[character.downcase] >= count
+  end
+end
 
-      hash.each do |key, val|
-        if current_best_val.nil? || val > current_best_val
-          current_best_val = val
-          current_best_key = key
-        end
-      end
+def character_count(str)
+  count = Hash.new(0)
 
-      current_best_key
-    end
-  ```
+  str.each_char do |char|
+    next if char == " "
+    count[char.downcase] += 1
+  end
+
+  count
+end
+```

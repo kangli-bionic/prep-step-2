@@ -26,3 +26,7 @@
 * You're Almost There!
   * [Technical Skype Interview](part3-outro/final_test.md)
   * [Practice Assessments](part3-outro/assessments.md)
+    * [Assessment 1 Walkthrough](part3-outro/walkthrough_one.md)
+    * [Assessment 2 Walkthrough](part3-outro/walkthrough_two.md)
+    * [Assessment 3 Walkthrough](part3-outro/walkthrough_three.md)
+    * [Assessment 4 Walkthrough](part3-outro/walkthrough_four.md)

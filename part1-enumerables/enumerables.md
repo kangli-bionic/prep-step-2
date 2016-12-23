@@ -86,7 +86,7 @@ that, when passed to that block, return a truthy value.
 
 ## `select` and `reject`
 
-Like `map`, `select` returns a new array, and like `all?`, `none?`, and `any?`,
+Like `map`, `select` returns a new collection, and like `all?`, `none?`, and `any?`,
 it evaluates each element in its receiver for truthiness. `select` returns a
 collection containing all the elements in its receiver for which the given block
 returns a truthy value. `reject` does the opposite: it returns a collection
