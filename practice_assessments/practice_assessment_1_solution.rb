@@ -6,8 +6,8 @@ def isogram_matcher(isogram1, isogram2)
   idx_match = 0
   letter_match = 0
 
-  isogram1.length.times do |i|
-    if(isogram1[i] == isogram2[i])
+  isogram1.chars.each_index do |i|
+    if isogram1[i] == isogram2[i]
       idx_match += 1
     elsif isogram2.include?(isogram1[i])
       letter_match += 1
@@ -33,21 +33,16 @@ def xbonacci(starting_sequence, n)
   num_to_sum = starting_sequence.length
 
   if n <= starting_sequence.length
-    return starting_sequence[0, n]
+    return starting_sequence[0...n]
   end
 
   until result.length == n
     last_n_numbers = result[-num_to_sum..-1]
-    debugger if !last_n_numbers
-    sum = array_sum(last_n_numbers)
+    sum = last_n_numbers.reduce(:+)
     result << sum
   end
 
   result
-end
-
-def array_sum(array)
-  array.reduce(0){ |sum, n| sum + n }
 end
 
 

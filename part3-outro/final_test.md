@@ -7,9 +7,8 @@ Hey everyone,
 Great work completing App Academy's Prep Step 2. You should be proud of
 everything you've accomplished and everything you've learned so far.
 
-The final technical step in our application process is for you to complete our
-Assessment Two. As a reminder, Assessment Two is done online with a TA from App
-Academy via a Skype conversation. You should check your inbox for an email with
+The final technical step in our application process is for you to complete a
+technical interview over Skype. You should check your inbox for an email with
 instructions describing how to sign up for the assessment.
 
 Assessment Two will be one hour long, and you'll be expected to solve coding

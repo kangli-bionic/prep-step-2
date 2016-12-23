@@ -62,12 +62,9 @@ def no_repeats?(song_name, songs)
 end
 
 def for_cs_sake(string)
+  remove_punctuation(string)
   c_words = string.split.select { |word| word.downcase.include?("c") }
   return "" if c_words.empty?
-  c_words.map! do |word|
-    remove_punctuation(word)
-    word
-  end
   c_words.sort_by { |word| c_distance(word) }.first
 end
 
@@ -90,7 +87,7 @@ def repeated_number_ranges(numbers)
   numbers.each_with_index do |el, idx|
     next_el = numbers[idx + 1]
     if el == next_el
-      start_index = idx if start_index.nil?
+      start_index = idx unless start_index #i.e., reset the start_index if it's nil
     elsif start_index # i.e., if the start index isn't nil (the numbers switched)
       ranges.push([start_index, idx])
       start_index = nil # reset the start_index to nil so we can capture more ranges

@@ -48,7 +48,7 @@ def ordered_vowel_words(words)
 end
 
 def ordered_vowel_word?(word)
-  vowels = "aeiou".chars
+  vowels = "aeiou"
 
   vowels_in_word = word.chars.select do |letter|
     vowels.include?(letter)

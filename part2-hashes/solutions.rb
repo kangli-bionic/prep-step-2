@@ -56,12 +56,7 @@ def most_common_vowel(string)
     counts[character] += 1 if vowels.include?(character)
   end
 
-  most_common = "a"
-  vowels.each do |vowel|
-    most_common = vowel if counts[vowel] > counts[most_common]
-  end
-
-  most_common
+  counts.sort_by {|k, v| v}.last.first
 end
 
 
@@ -82,8 +77,8 @@ def fall_and_winter_birthdays(students_with_birthdays)
   names = students.keys
   result = []
 
-  0.upto(names.length - 1) do |idx1|
-    ((idx1 + 1)...names.length).each do |idx2|
+  names.each_index do |idx1|
+    ((idx1 + 1)...names.length).each_index do |idx2|
       result << [ names[idx1], names[idx2] ]
     end
   end

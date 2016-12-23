@@ -1,9 +1,7 @@
 def remove_letter_a(words)
-  words.map { |word| remove_a(word) }
-end
-
-def remove_a(word)
-  word.gsub("a", "")
+  words.map do |word|
+    word.delete("a")
+  end
 end
 
 
@@ -25,18 +23,27 @@ end
 def greatest_common_factor(first_number, second_number)
   smaller_num = [first_number, second_number].min
 
-  smaller_num.downto(1) do |potential_factor|
+  (1..smaller_num).to_a.reverse.each do |potential_factor|
     if first_number % potential_factor == 0 &&
       second_number % potential_factor == 0
 
-        return potential_factor
+        return potential_factor # the first factor to be returned is the largest
     end
   end
 end
 
 
 def word_with_most_repeats(sentence)
-  sentence.split.max_by { |word| count_repeats(word) }
+  words_and_repeats = {}
+  words = sentence.split
+
+  words.each do |word|
+    words_and_repeats[word] = count_repeats(word)
+  end
+  
+  largest_count = words_and_repeats.sort_by {|k,v| v}.last.last #find largest count
+  # return the earlier word in the event of a tie
+  words_and_repeats.select {|k,v| v == largest_count}.first.first
 end
 
 def count_repeats(word)

@@ -24,5 +24,5 @@
   * [Walkthrough](part2-hashes/walkthrough.md)
 
 * You're Almost There!
-  * [One Final Test](part3-outro/final_test.md)
+  * [Technical Skype Interview](part3-outro/final_test.md)
   * [Practice Assessments](part3-outro/assessments.md)

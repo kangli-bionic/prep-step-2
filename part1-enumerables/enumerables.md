@@ -2,7 +2,7 @@
 
 The Enumerable module (don't worry about what a module is for now!) contains a
 set of methods called **enumerables** that primarily traverse or sort collections
-(ranges, arrays, and hashes). We'll concern ourselves with arrays until the next
+(ranges, arrays, and hashes). We'll concern ourselves with only arrays until the next
 chapter, when we'll study hashes. You can already replicate the behavior of
 every enumerable, but these methods offer elegant solutions to common problems.
 

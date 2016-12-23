@@ -31,7 +31,7 @@ def product_punctuation(str)
 end
 
 def latinize(word)
-  vowels = "aeiou".chars
+  vowels = "aeiou"
   until vowels.include?(word[0].downcase)
     word = word[1..-1] + word[0]
   end
