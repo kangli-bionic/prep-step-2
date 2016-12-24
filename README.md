@@ -20,3 +20,5 @@ a Skype conversation. We've given you four practice assessments to prepare
 before you take this assessment.
 
 Good luck, future developers!
+
+[step1]: https://app-academy.gitbooks.io/prep-step-1/content/
