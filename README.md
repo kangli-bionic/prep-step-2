@@ -16,7 +16,7 @@ problems.
 
 Once you've finished the curriculum for Prep Step 2, you'll want to take our
 Step 2 assessment. This assessment is done online with a TA from App Academy via
-a Skype conversation. We've given you four practice assessments to prepare
+a Skype interview. We've given you four practice assessments to prepare
 before you take this assessment.
 
 Good luck, future developers!

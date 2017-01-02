@@ -135,7 +135,7 @@ words_by_length(poor_gregor) #=> ["a", "As", "he", "in", "his", "one", "bed",
 ## `each_with_index` and `with_index`
 
 `each_with_index` works as you'd expect: it calls the given block with two
-arguments--the item and the item's index--once for each element in the method's
+arguments--the item and the item's index--once for each item in the method's
 receiver. The syntax for passing two arguments for a block is unfamiliar but
 straightforward:
 

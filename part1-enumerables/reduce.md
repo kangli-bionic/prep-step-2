@@ -13,7 +13,7 @@ binary operation. Let's examine each case.
 
 ## With a Symbol
 
-What do these invocations of `reduce` do? How do the array elements contribute
+What do these invocations of `reduce` do? How do the array's elements contribute
 to the return value?
 
 ```ruby
@@ -44,7 +44,7 @@ executes these steps under the hood:
   3. The interpreter reassigns the accumulator to the return value of the addition in step 2 (`3`).
   4. The interpreter invokes the `+` operator again with the accumulator (`3`) as the receiver and the next element in the array (`3`) as the argument (i.e., `3 + 3` or `3.+(3)`).
   5. The interpreter reassigns the accumulator to the return value of the addition in step 4 (`6`).
-  6. Because the array has no remaining elements, the interpreter returns the accumulator, `6`.
+  6. Because the array has no remaining elements, the interpreter returns the accumulator: `6`.
 
 This method is analogous to `reduce(:+)`:
 
@@ -73,7 +73,7 @@ These two invocations of `reduce` are functionally equivalent:
 
 The second invocation is more explicit. The interpreter stores the first element
 of the array in the `acc` argument and adds every subsequent element in
-succession. After each iteration, the interpreter _reassigns `acc` to the return
+succession. After each iteration, the interpreter _reassigns_ `acc` _to the return
 value of the block_. It returns `acc`  when no elements remain.  
 
 Invoking `reduce` with a block gives greater control over how to reduce the
@@ -98,7 +98,7 @@ sum_first_and_odds([1, 2, 4, 5]) #=> 6
 
 Nor does one need to combine elements. The accumulator is simply a variable
 available throughout the iteration that's reassigned after each iteration. In
-Step 1's sixth practice assessment we wrote a method that determined the longest
+Step 1's sixth practice assessment, we wrote a method that determined the longest
 word in a string. Here's the original solution and one using `reduce`:
 
 ```ruby
@@ -179,14 +179,13 @@ end
 ```
 
 Using `reduce` with an initial accumulator reduces defining a counter variable
-and iterating through a collection to one method invocation.
+and iterating through a collection to a single method invocation.
 
-In the fifth practice assessment, we asked you to define a method
-(`boolean_to_binary(arr)`), that accepts an array of booleans as an argument.
-The method should convert the array into a string of 1's (for `true` values) and
-0's (for `false` values) and return the result. Here's our solution as well as
-an implementation using `reduce` with an empty string as the initial
-accumulator:
+In the fifth practice assessment, we asked you to define a method,
+`boolean_to_binary`, which accepts an array of booleans as an argument. The
+method should convert the array into a string of 1's (for `true` values) and 0's
+(for `false` values) and return the result. Here's our solution as well as an
+implementation using `reduce` with an empty string as the initial accumulator:
 
 ```ruby
 # OLD SOLUTION
