@@ -59,13 +59,13 @@ increasingly_less_simple_hash #=> {0=>"z", 1=>"b", 2=>"c", 3=>"d", 5=>"w"}
 So far you may be wondering what all the hubbub is about. We can do all these
 operations using array indices! Much of the magic of hashes derives from the fact
 that the keys are arbitrary and may be of any data type. The only constraint is
-that all keys must be unique. If two `5` keys point to different values, the
-Ruby interpreter won't know which value to access. In practice, the interpreter
-overwrites the earlier key-value pair if a later key-value pair with an
-equivalent key is provided.
+that all keys must be unique. If two `5` keys pointed to different values, the
+Ruby interpreter wouldn't know which value to access. In practice, the interpreter
+overwrites the earlier key-value pair when one provides another key-value pair
+with an equivalent key.
 
 ```ruby
-# The formatting is purely for readability.
+# The formatting is purely for legibility.
 nerdy_hash = {
   "fibonacci_numbers" => [0, 1, 1, 2, 3, 5],
   :pre_socratics => ["Thales", "Xenophanes", "Diogenes", "Heraclitus", "Pythagoras"],
