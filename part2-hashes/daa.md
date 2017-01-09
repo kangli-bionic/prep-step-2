@@ -1,5 +1,9 @@
 # Hashes
 
+
+<iframe src="https://player.vimeo.com/video/198425170?rel=0&autoplay=1" width="100%" height="400px" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="line-height: 1.6em;" rel="line-height: 1.6em;"></iframe>
+
+
 A **hash** is a collection of key-value pairs with unique keys. One can also
 imagine arrays as a collection of key-value pairs, where the keys are the
 indices. One accesses a value in an array _via its key_, i.e., with its index.
