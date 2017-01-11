@@ -78,7 +78,7 @@ def fall_and_winter_birthdays(students_with_birthdays)
   result = []
 
   names.each_index do |idx1|
-    ((idx1 + 1)...names.length).each_index do |idx2|
+    ((idx1 + 1)...names.length).each do |idx2|
       result << [ names[idx1], names[idx2] ]
     end
   end
