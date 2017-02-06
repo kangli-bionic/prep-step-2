@@ -7,7 +7,7 @@
       <answer correct><code>false</code></answer>
       <answer><code>2</code></answer>
       <answer><code>[1, 4, 9, 16]</code></answer>
-      <explanation>All of the receiver's elements are not odd. Therefore the return value is <code>false</code>.</explanation>
+      <explanation>All of the receiver's elements are not even. Therefore the return value is <code>false</code>.</explanation>
   </question>
 </quiz>
 
