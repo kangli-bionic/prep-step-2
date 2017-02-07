@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+  * [How to Use Repl.it](how_to_repl.md)
 
 ### Curriculum
 
