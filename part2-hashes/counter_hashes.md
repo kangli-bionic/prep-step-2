@@ -14,10 +14,10 @@ dog_breeds["Australian cattle dog"] #=> nil
 
 # with a default value
 default_cuties = Hash.new("cutie")
-dog_breeds["vizsla"] #=> "cutie"
+default_cuties["vizsla"] #=> "cutie"
 
 # accessing a nonexistent key doesn't alter the hash
-dog_breeds #=> {}
+default_cuties #=> {}
 ```
 
 Setting a default value of `0` is helpful for creating a counter hash, one that
