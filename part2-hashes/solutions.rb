@@ -49,14 +49,16 @@ def evens_and_odds(numbers)
 end
 
 def most_common_vowel(string)
-  vowels = %w(a e i o u)
-  counts = Hash.new(0) # Give the hash a default value of 0
-
-  string.each_char do |character|
-    counts[character] += 1 if vowels.include?(character)
+  vowel_counts = Hash.new(0)
+  
+  string.each_char do |char|
+    vowel_counts[char] += 1 if 'aeiou'.include?(char)
   end
-
-  counts.sort_by {|k, v| v}.last.first
+  
+  max_val = vowel_counts.values.max
+  
+  ties = vowel_counts.select{|_, v| v == max_val}
+  ties.keys.min
 end
 
 
