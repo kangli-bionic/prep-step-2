@@ -7,7 +7,7 @@ chapter, when we'll study hashes. You can already replicate the behavior of
 every enumerable, but these methods offer elegant solutions to common problems.
 
 
-## `all?`, `none?`, `any?`
+## all?, none?, any?
 
 Here's how you might check whether every integer in an array is even using what
 you've learned:
@@ -47,7 +47,7 @@ end
 ```
 
 
-## `map`
+## map
 
 Already tired of setting up result arrays and shoveling elements inside? What
 about having to awkwardly modify arrays with `each_index`? The `map` enumerable
@@ -69,7 +69,7 @@ about_to_be_slightly_less_simpleton #=> [1, 4, 9]
 ```
 
 
-## `count`
+## count
 
 Recall that the `count` method has two variations for arrays. It can take no
 argument, where it's synonymous with `length`, or it can take one argument,
@@ -84,7 +84,7 @@ that, when passed to that block, return a truthy value.
 ```
 
 
-## `select` and `reject`
+## select and reject
 
 Like `map`, `select` returns a new collection, and like `all?`, `none?`, and `any?`,
 it evaluates each element in its receiver for truthiness. `select` returns a
@@ -109,7 +109,7 @@ their receivers (`select!` and `reject!`).
 ```
 
 
-## `sort_by`
+## sort_by
 
 The `sort_by` method sorts its receiver by the return values of its elements
 when they are passed to the given block, and it returns an array in that order.
@@ -132,7 +132,7 @@ words_by_length(poor_gregor) #=> ["a", "As", "he", "in", "his", "one", "bed",
 ```
 
 
-## `each_with_index` and `with_index`
+## each_with_index and with_index
 
 `each_with_index` works as you'd expect: it calls the given block with two
 arguments--the item and the item's index--once for each item in the method's

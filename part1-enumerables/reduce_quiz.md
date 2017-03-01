@@ -1,4 +1,4 @@
-# `reduce` Quiz
+# Reduce Quiz
 
 <quiz>
   <question>

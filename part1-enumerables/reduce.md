@@ -1,4 +1,4 @@
-# `reduce`
+# reduce
 
 `reduce` is by far the most difficult enumerable to learn. Luckily your teacher
 is a professional! `reduce` can be invoked in three ways:
