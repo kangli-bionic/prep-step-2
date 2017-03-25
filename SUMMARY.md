@@ -8,22 +8,22 @@
 * Easy
   * [Primer](easy/primer.md)
   * [Anagrams?](easy/anagrams.md)
-  * [Remove Nth](easy/remove_nth.md)
+  * [Remove Nth Letter](easy/remove_nth.md)
   * [Nearest Larger](easy/nearest_larger.md)
   * Solutions
     [Anagrams?](easy/solutions/anagrams.md)
-    [Remove Nth](easy/solutions/remove_nth.md)
+    [Remove Nth Letter](easy/solutions/remove_nth.md)
     [Nearest Larger](easy/solutions/nearest_larger.md)
 
 * Medium
   * [Primer](medium/primer.md)
   * [High Card Points](medium/high_card_points.md)
   * [Longest Bigram](medium/longest_bigram.md)
-  * [Vowel Filter](medium/vowel_filter.md)
+  * [Disemvowel](medium/vowel_filter.md)
   * Solutions
     * [High Card Points](medium/solutions/high_card_points.md)
     * [Longest Bigram](medium/solutions/longest_bigram.md)
-    * [Vowel Filter](medium/solutions/vowel_filter.md)
+    * [Disemvowel](medium/solutions/vowel_filter.md)
 
 * Hard
   * [Primer](hard/primer.md)
