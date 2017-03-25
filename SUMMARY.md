@@ -9,20 +9,20 @@
   * [Primer](easy/primer.md)
   * [Anagrams?](easy/anagrams.md)
   * [Remove Nth Letter](easy/remove_nth.md)
-  * [Nearest Larger](easy/nearest_larger.md)
+  * [High Card Points](easy/high_card_points.md)
   * Solutions
     [Anagrams?](easy/solutions/anagrams.md)
     [Remove Nth Letter](easy/solutions/remove_nth.md)
-    [Nearest Larger](easy/solutions/nearest_larger.md)
+    [High Card Points](easy/solutions/high_card_points.md)
 
 * Medium
   * [Primer](medium/primer.md)
-  * [High Card Points](medium/high_card_points.md)
   * [Longest Bigram](medium/longest_bigram.md)
+  * [Nearest Larger](medium/nearest_larger.md)
   * [Disemvowel](medium/vowel_filter.md)
   * Solutions
-    * [High Card Points](medium/solutions/high_card_points.md)
     * [Longest Bigram](medium/solutions/longest_bigram.md)
+    * [High Card Points](medium/solutions/nearest_larger.md)
     * [Disemvowel](medium/solutions/vowel_filter.md)
 
 * Hard
