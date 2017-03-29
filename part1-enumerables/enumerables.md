@@ -145,7 +145,7 @@ straightforward:
     "Divided", "by", "accepted", "multitudes."]
 
   three_lines.each_with_index do |word, idx| #the parameters are comma separated and in order
-    if word = word.capitalize
+    if word == word.capitalize
       puts "The word at index #{idx} must be the start of a new line!"
     end
   end
