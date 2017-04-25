@@ -1,4 +1,4 @@
-# Disemvowel
+# Vowel Filter
 
 ```ruby
 def disemvowel(str)
